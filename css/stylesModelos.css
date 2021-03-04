@@ -1,0 +1,211 @@
+*
+{
+    /*  Variables   */
+    --buscador-height: 40px;
+    --my-box-shadow: 3px 3px 5px #807f7f;
+    --search-list-border-radius: 0 0 20px 20px;
+    --outer-input-box-color: rgba(62,27,255,1);
+    --inner-input-box-color: #664aff;
+}
+
+
+@media screen and (min-width: 1200px)
+{
+    .contenedor
+    {
+        width: 33.333%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px)
+{
+    .contenedor
+    {
+        width: 50%;
+    }
+}
+
+#wrapper-buscador
+{
+    padding-block: 15px;
+}
+
+#buscador, #buscador input
+{
+    border-radius: 30px;
+}
+
+#buscador input, #buscador button
+{
+    position: absolute;
+    height: var(--buscador-height);
+    border: 0;
+}
+
+#buscador
+{
+    background: linear-gradient(0deg, var(--outer-input-box-color) 0%, rgba(145,124,255,1) 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 25%;
+    padding-block: 30px;
+}
+
+#buscador input
+{
+    padding-left: 20px;
+}
+
+#buscador button
+{
+    /*position: absolute;*/
+    right: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: #fff;
+    width: var(--buscador-height); /*El width debe ser igual al height para que el boton sea circular*/
+}
+
+#buscador button:hover
+{
+    background-color: #fff;
+    /*box-shadow: var(--my-box-shadow);*/
+    color: var(--outer-input-box-color);
+}
+
+#buscador input, #search-list
+{
+    left: 10px;
+    width: 80%;
+    background-color: var(--inner-input-box-color);
+    color:#fff;
+}
+
+#wrapper-search-list
+{
+    display: block;
+    width: 100%;
+}
+
+#search-list
+{
+    display: none;
+    position:absolute;
+    box-shadow: var(--my-box-shadow);
+    top: var(--buscador-height);
+    border-radius: var(--search-list-border-radius);
+    z-index: 1;
+}
+
+#search-list ul
+{
+    padding-left:0;
+    margin:0;
+}
+
+.list-item
+{
+    list-style: none;
+    color:white;
+    font-weight:bolder;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-block: 5px;
+}
+
+.list-item:hover
+{
+    /*background-color:#5237ec;*/
+    background-color: #fff;
+    color: var(--inner-input-box-color);
+}
+
+.list-item:last-of-type:hover
+{
+    border-radius: var(--search-list-border-radius);
+}
+
+#wrapper-imagenes, #wrapper-buscador, #sin-resultados
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenes
+{
+    width: 70%;
+}
+
+.contenedor
+{
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.oculto
+{
+    display: none !important;
+}
+
+.contenedor:hover
+{
+    padding: 0;
+    opacity: 0.7;
+}
+
+.contenedor img
+{
+    display: flex;
+    width: 100%;
+    /*margin: auto;*/
+}
+
+#sin-resultados
+{
+    min-height: 60vh;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#quickview-holder
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    width: 75%;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#quickview-img
+{
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 25%;
+}
+
+#quickview-close
+{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: x-large;
+    color: #bbb;
+}
+
+#quickview-close:hover
+{
+    color: var(--inner-input-box-color);
+}
+
+

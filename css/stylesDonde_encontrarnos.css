@@ -1,0 +1,34 @@
+article
+{
+    margin-block: 30px;
+    margin-inline: 150px;
+}
+
+article h1
+{
+    margin-bottom: 15px;
+}
+
+.respuesta
+{
+    display: flex;
+}
+
+#Por_donde_se_retira .respuesta p, #iframe-container
+{
+    width: 50%;
+}
+
+#iframe-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe
+{
+    /*border: none;*/
+    width: 600px;
+    height: 450px;
+}

@@ -1,0 +1,91 @@
+*
+{
+    /*  Variables   */
+    --outer-input-box-color: rgba(62,27,255,1);
+}
+
+.Contenedor
+{
+    position: relative;
+}
+
+.portadas
+{
+    width: 100%;
+    display:block;
+}
+
+.Texto
+{
+    position: absolute;
+    width: max-content;
+    top: 30%;
+}
+
+#barbijos
+{
+    left: 75px;
+}
+
+#pilusos
+{
+    right: 75px;
+}
+
+h1
+{
+    color: white;
+    font-family: "Playlist";
+    margin-bottom: 20px;
+}
+
+.Boton
+{
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(0deg, var(--outer-input-box-color) 0%, rgba(145,124,255,1) 100%);
+    border-radius: 30px;
+    padding-block: 20px;
+    height: 60px;
+    width: 200px;
+}
+
+.Boton span, .Boton a
+{
+    position: absolute;
+}
+
+.Boton a
+{
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    color:#fff;
+}
+
+.Boton a button
+{
+    height: inherit;
+    width: inherit;
+    /*right: 20px;*/
+    padding: 0;
+    border-radius: inherit;
+    background:transparent;
+    border: none;
+    color: #fff;
+}
+
+.Boton a:hover button
+{
+    background: #fff;
+    color: var(--outer-input-box-color);
+}
+
+.Boton span
+{
+    left: 40px;
+}

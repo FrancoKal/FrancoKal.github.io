@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html>
+        <head lang = "es">
+            <meta charset = "UTF-8">
+            <meta name = "Descripcion"  content = "">
+            <meta name = "Autor"        content = "">
+            <meta name = "keywords"     content = "">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Pagina Ita</title>
+            <base href = "http://0.0.0.0:8000/">
+            <link rel = "stylesheet" href = "css/stylesGenerales.css">
+            <link rel = "stylesheet" href = "css/stylesModelos.css">
+            <script src="https://kit.fontawesome.com/a61747b6f1.js" crossorigin="anonymous"></script>
+            <script src = "js/modelos.js"></script>
+        </head>
+
+        <body>
+            <header>
+                <img src = "imagenes/logo_transparente.png" alt = "logo" id = "Logo">
+                <nav>
+                    <a href = "donde_encontrarnos.html">Donde encontrarnos</a>
+                    <a href = "index.html"><i class = "fas fa-home"></i></a>
+                </nav>
+            </header>
+            <main class = "clearfix">
+                <div id = "wrapper-buscador">
+                    <div id = "buscador">
+                        <input type = "search" placeholder = "Buscar..." onkeyup = "INPUT.ShowSuggestions(this.value)"><!--
+                    --><div id = "search-list">
+                            <ul>
+                            <!--    Aca van las sugerencias de busqueda -->
+                            </ul>
+                        </div>
+                        <button type = "submit" onclick = "INPUT.Search()"><i class = "fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div id = "quickview-holder">
+                    <i class="fas fa-times" id = "quickview-close" onclick = "QUICK_VIEW.close()"></i>
+                    <img id = "quickview-img" src = "">
+                </div>
+                <div id = "wrapper-imagenes">
+                    <div id = "imagenes">
+                        <!-- Aca van las imagenes de los modelos -->
+                       <div id = "sin-resultados" class = "oculto"><b>¡Ups! No se han encontrado resultados</b></div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <nav id = "Redes_sociales">
+                    <a id = "instagram" href = "https://www.instagram.com/vickycalvino/"><i class="fab fa-instagram"></i></a><!--
+                    --><a id = "whatsapp" href = "https://wa.link/j0uf3y"><i class="fab fa-whatsapp"></i></a>
+                </nav>
+            </footer>
+        </body>
+    </html>

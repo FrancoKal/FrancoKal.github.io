@@ -1,0 +1,148 @@
+*
+{
+    font-family: 'League Spartan';
+    margin: 0;
+    box-sizing: border-box;
+
+    /*  Variables   */
+    --header-height: 15vh;
+    --my-box-shadow: 3px 3px 5px #807f7f;
+}
+
+/*Para que no aparezca un contorno punteado al hacer click en algun link o boton*/
+button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner
+{
+    border: none;
+    outline: none;
+}
+
+:hover
+{
+    transition-duration: 0.1s;
+}
+
+body
+{
+    min-height: 100vh;
+    position: relative;
+}
+
+main
+{
+    min-height: inherit;
+}
+
+main::before, main::after
+{
+    display: block;
+    content: " ";
+    height: var(--header-height);
+}
+
+/*--------------Header--------------*/
+
+header, footer
+{
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(5,0,82,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 86%);
+    /*background: linear-gradient(0deg, rgba(5,0,82,1) 0%, rgba(0,212,255,1) 100%);*/
+}
+
+header
+{
+    z-index: 2;
+    position: fixed;
+    /*top: 0;*/
+}
+
+header nav, #Logo
+{
+    position: absolute;
+}
+
+header nav
+{
+    right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header a
+{
+    text-decoration: none;
+    color:white;
+    padding-inline: 30px;
+    padding-block: 10px;
+}
+
+header a:hover
+{
+    background-color: #fff;
+    opacity: 0.4;
+    box-shadow: var(--my-box-shadow);
+    color: rgb(88, 88, 88);
+}
+
+header .fas.fa-home, #Redes_sociales a
+{
+    font-size: xx-large;
+}
+
+#Logo
+{
+    left: 50px;
+    height: 80px;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+}
+
+#Redes_sociales a
+{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+#Redes_sociales a:hover
+{
+    padding: 30px;
+}
+
+#instagram
+{
+    background-color: rgb(221,42,123);
+}
+
+#whatsapp
+{
+    background-color: rgb(44,180,89);
+}
+
+/*---------------Fonts---------------------*/
+
+@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
+@font-face
+{
+    font-family: "Playlist";
+    src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot");
+    src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff") format("woff"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.svg#Playlist") format("svg");
+}
+
+@import url(//db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan);
+@font-face
+{
+    font-family: "League Spartan";
+    src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot");
+    src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff") format("woff"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.svg#League Spartan") format("svg");
+} 
+
+
+
