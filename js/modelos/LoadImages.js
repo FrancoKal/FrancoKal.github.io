@@ -1,33 +1,7 @@
-var INPUT, QUICK_VIEW;
+var INPUT;
 //Abro el list.json del directorio que leo en el sessionStorage con los datos de cada modelo
 var ListName = sessionStorage.getItem("ImgList");
 var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.getItem("lastTimeFromUpdate-" + ListName);
-
-window.onload = function ()
-{
-    QUICK_VIEW = (function ()
-    {
-        var qv = {
-            img: document.getElementById("quickview-img"),
-            holder: document.getElementById("quickview-holder")
-        };
-
-        return {
-
-            open: function (obj)
-            {
-                qv.img.src = obj.getElementsByTagName("img")[0].src;
-                qv.holder.style.display = "block";
-            },
-
-            close: function ()
-            {
-                qv.img.src = "";
-                qv.holder.style.display = "none";
-            }
-        };
-    }) ();
-};
 
 (async () => {
     var list = await GetListFrom(directory + "list.json");
