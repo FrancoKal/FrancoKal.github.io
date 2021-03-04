@@ -1,6 +1,5 @@
 # $@ Contiene el target
 # $< Contiene las dependencias del target
-#jfkjkgg
 
 
 git: 
