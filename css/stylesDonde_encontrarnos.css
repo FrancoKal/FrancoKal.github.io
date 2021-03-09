@@ -94,11 +94,10 @@ main, #wrapper-content, #right-iframe-wrapper
     align-items: center;
 }
 
-#location i
+#round-pushpin-emoji
 {
     margin-left: 20%;
     font-size: xx-large;
-    color: red;
 }
 
 #direccion
