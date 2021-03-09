@@ -1,5 +1,11 @@
 @media screen and (min-width: 1200px)
 {
+    *
+    {
+        /*  Variables   */
+        --circle-diameter: 100vh;
+    }
+
     #wrapper-boton
     {
         top: 30%;
@@ -32,6 +38,12 @@
 
 @media screen and (max-width: 1200px)
 {
+    *
+    {
+        /*  Variables   */
+        --circle-diameter: 50vh;
+    }
+
     #half-circle
     {
         clip-path: circle(var(--circle-diameter) at top);
@@ -47,7 +59,7 @@
 {
     /*  Variables   */
     --outer-input-box-color: rgba(62,27,255,1);
-    --circle-diameter: 100vh;
+    /*--circle-diameter: 100vh;*/
     --my-box-shadow: 10px 10px 15px #2e2e2e;
 }
 
