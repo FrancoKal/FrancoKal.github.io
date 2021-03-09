@@ -1,34 +1,107 @@
-article
+*
 {
-    margin-block: 30px;
-    margin-inline: 150px;
+    --my-box-shadow: 3px 3px 5px #807f7f;
 }
 
-article h1
-{
-    margin-bottom: 15px;
-}
-
-.respuesta
+main, #wrapper-content, #right-iframe-wrapper
 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#Por_donde_se_retira .respuesta p, #iframe-container
+#wrapper-content
 {
-    width: 50%;
+    width: 80%;
+    height: 400px;
+}
+
+#left-text, #right-iframe-wrapper
+{
+    height: inherit;
+}
+
+#left-text
+{
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#left-text h1
+{
+    font-family: 'Playlist';
+    margin-bottom:20px;
+}
+
+#right-iframe-wrapper
+{
+    width: 60%;
 }
 
 #iframe-container
 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 80%;
+    height: 100%;
 }
 
-iframe
+#iframe-container iframe
 {
-    /*border: none;*/
-    width: 600px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
+}
+
+.change-location
+{
+    font-size: xx-large;
+    opacity: 0.5;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+}
+
+.change-location:hover
+{
+    opacity: 1;
+}
+
+.change-location#left
+{
+    left: 2%;
+}
+
+.change-location#right
+{
+    right: 2%;
+}
+
+#municipio
+{
+    margin-top: 20px;
+}
+
+#location
+{
+    display: flex;
+    align-items: center;
+}
+
+#location i
+{
+    margin-left: 20%;
+    font-size: xx-large;
+    color: red;
+}
+
+#direccion
+{
+    margin-left: 10%;
 }

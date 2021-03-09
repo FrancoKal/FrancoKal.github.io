@@ -2,44 +2,38 @@
 {
     /*  Variables   */
     --outer-input-box-color: rgba(62,27,255,1);
+    --circle-diameter: 100vh;
+    --my-box-shadow: 10px 10px 15px #2e2e2e;
 }
 
-.Contenedor
+section
 {
+    display: flex;
+    height: var(--circle-diameter);
+    width: 100%;
     position: relative;
 }
 
-.portadas
-{
-    width: 100%;
-    display:block;
-}
-
-.Texto
+#wrapper-boton, #big-img, #boton span, #boton a, #product-bar
 {
     position: absolute;
+}
+
+#wrapper-boton
+{
     width: max-content;
     top: 30%;
-}
-
-#barbijos
-{
-    left: 75px;
-}
-
-#pilusos
-{
-    right: 75px;
+    left: 20%;
 }
 
 h1
 {
-    color: white;
+    color: #4f5355;
     font-family: "Playlist";
     margin-bottom: 20px;
 }
 
-.Boton
+#boton
 {
     display: flex;
     position: relative;
@@ -52,12 +46,7 @@ h1
     width: 200px;
 }
 
-.Boton span, .Boton a
-{
-    position: absolute;
-}
-
-.Boton a
+#boton a
 {
     right: 20px;
     height: 40px;
@@ -67,7 +56,7 @@ h1
     color:#fff;
 }
 
-.Boton a button
+#boton a button
 {
     height: inherit;
     width: inherit;
@@ -79,13 +68,62 @@ h1
     color: #fff;
 }
 
-.Boton a:hover button
+#boton a:hover button
 {
     background: #fff;
     color: var(--outer-input-box-color);
 }
 
-.Boton span
+#boton span
 {
     left: 40px;
+}
+
+#half-circle
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(var(--circle-diameter) at right);
+    background-color: /*#83acbd*/ #9d7463;
+}
+
+#big-img
+{
+    z-index: 1;
+    align-self: center;
+    right: 10vh;
+}
+
+#product-bar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+#product-bar ul
+{
+    display: flex;
+    list-style: none;
+}
+
+#product-bar ul li img:hover
+{
+    transform:translateY(-25%);
+    -webkit-filter: drop-shadow(var(--my-box-shadow));
+}
+
+#product-bar ul li img:active
+{
+    width: 30vh;
+}
+
+#product-bar img
+{
+    width: 25vh;
 }

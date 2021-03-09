@@ -7,13 +7,13 @@
             <meta name = "keywords"     content = "">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Pagina Ita</title>
-            <base href = "https://francokal.github.io">
-            <!--<base href = "https://paginaita.com/">-->
+            <base href = "http://0.0.0.0:8000/">
             <link rel = "stylesheet" href = "css/stylesIndex.css">
             <link rel = "stylesheet" href = "css/stylesGenerales.css">
             <link href="//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist" rel="stylesheet" type="text/css"/> 
             <link href="//db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan" rel="stylesheet" type="text/css"/> 
             <script src="https://kit.fontawesome.com/a61747b6f1.js" crossorigin="anonymous"></script>
+            <script src = "js/index/BarFunctions.js"></script>
         </head>
 
         <body>
@@ -25,35 +25,30 @@
                 </nav>
             </header>
             <main>
-                <div class = "Contenedor">
-                    <img src = "imagenes/barbijos.jpg" alt = "barbijos" class = "portadas">
-                    <div class = "Texto" id = "barbijos">
-                        <h1>Barbijos / Cubrebocas</h1>
-                        <div class = "Boton">
-                            <span>VER</span>
-                            <a href = "modelos.html" class = "a_pagina" onclick = "sessionStorage.setItem('ImgList', 'barbijos')">
-                                <button><i class="fas fa-chevron-right"></i></button>
-                            </a>
+                <section>
+                    <div id = "half-circle"></div>
+                    <img src = "imagenes/barbijo_portada.png" alt = "barbijos" id = "big-img">
+                        <div id = "wrapper-boton">
+                            <h1>Barbijos / Cubrebocas</h1>
+                            <div id = "boton">
+                                <span>VER</span>
+                                <a href = "modelos.html">
+                                    <button><i class="fas fa-chevron-right"></i></button>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class = "Contenedor">
-                    <img src = "imagenes/pilusos.jpg" alt = "pilusos" class = "portadas">
-                    <div class = "Texto" id = "pilusos">
-                        <h1>Pilusos</h1>
-                        <div class = "Boton">
-                            <span>VER</span>
-                            <a href = "modelos.html" class = "a_pagina" onclick = "sessionStorage.setItem('ImgList', 'pilusos')">
-                                <button><i class="fas fa-chevron-right"></i></button>
-                            </a>
+                        <div id = "product-bar">
+                            <ul>
+                                <li><img src = "imagenes/barbijo_portada.png" id = "barbijos"></li>
+                                <li><img src = "imagenes/piluso_portada.png" id = "pilusos"></li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
+                </section>
             </main>
             <footer>
                 <nav id = "Redes_sociales">
-                    <a id = "instagram" href = "https://www.instagram.com/vickycalvino/"><i class="fab fa-instagram"></i></a>
-                    <a id = "whatsapp" href = "https://wa.link/j0uf3y"><i class="fab fa-whatsapp"></i></a>
+                    <a id = "instagram" href = "https://www.instagram.com/vickycalvino/"><i class="fab fa-instagram"></i></a><!--
+                    --><a id = "whatsapp" href = "https://wa.link/j0uf3y"><i class="fab fa-whatsapp"></i></a>
                 </nav>
             </footer>
         </body>

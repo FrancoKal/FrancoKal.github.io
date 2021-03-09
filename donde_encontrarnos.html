@@ -7,13 +7,13 @@
             <meta name = "keywords"     content = "">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Pagina Ita</title>
-            <base href = "https://francokal.github.io">
-            <!--<base href = "https://paginaita.com/">-->
+            <base href = "http://0.0.0.0:8000/">
             <link rel = "stylesheet" href = "css/stylesGenerales.css">
             <link rel = "stylesheet" href = "css/stylesDonde_encontrarnos.css">
             <link href="//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist" rel="stylesheet" type="text/css"/> 
             <link href="//db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan" rel="stylesheet" type="text/css"/> 
             <script src="https://kit.fontawesome.com/a61747b6f1.js" crossorigin="anonymous"></script>
+            <script src = "js/donde_encontrarnos/IframeFunctions.js"></script>
         </head>
 
         <body>
@@ -25,37 +25,30 @@
                 </nav>
             </header>
             <main>
-                <article id = "Por_donde_se_retira">
-                    <h1 class = "pregunta">¿Por donde se retiran los pedidos?</h1>
-                    <div class = "respuesta">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Sequi amet, veniam quasi nulla explicabo molestiae vel ullam consequatur pariatur vero nemo possimus id facilis totam, maxime fuga?
-                            Sit, natus sed dolor est necessitatibus pariatur reprehenderit inventore odit accusantium quibusdam
-                            culpa fugiat molestiae temporibus quidem quaerat ab dolorem molestias dolore provident.
-                        </p>
-                        <div id = "iframe-container">
-                            <iframe></iframe>
-                            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18548.716131599107!2d-58.3997926995373!3d-34.7308798594738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd5ebe0e2a37%3A0x5999d48a8fa30ee!2sRemedios%20de%20Escalada!5e0!3m2!1ses-419!2sar!4v1613686393278!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
+                <div id = "wrapper-content">
+                    <div class = "content" id = "left-text">
+                        <div>
+                            <h1>Hace tu pedido</h1>
+                            <p>Y cuando este listo, podes encontrarnos en:</p>
+                            <h2 id = "municipio">Banfield</h2>
+                        </div>
+                        <div id = "location">
+                            <i class="fas fa-map-marker-alt"></i><span id = "direccion">A 2 cuadras de la estacion</span>
                         </div>
                     </div>
-                </article>
-                <article id = "Hacen_entregas">
-                    <h1 class = "pregunta">¿Hacen entregas?</h1>
-                    <div class = "respuesta">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Sequi amet, veniam quasi nulla explicabo molestiae vel ullam consequatur pariatur vero nemo possimus id facilis totam, maxime fuga?
-                            Sit, natus sed dolor est necessitatibus pariatur reprehenderit inventore odit accusantium quibusdam
-                            culpa fugiat molestiae temporibus quidem quaerat ab dolorem molestias dolore provident.
-                        </p>
+                    <div class = "content" id = "right-iframe-wrapper">
+                        <div id = "iframe-container">
+                            <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+                            <button class = "change-location" id = "left" onclick = "CHANGE_LOCATION.to('Banfield')"><i class="fas fa-chevron-circle-left"></i></button>
+                            <button class = "change-location" id = "right" onclick = "CHANGE_LOCATION.to('Adrogue')"><i class="fas fa-chevron-circle-right"></i></button>
+                        </div>          
                     </div>
-                </article>
+                </div>
             </main>
             <footer>
                 <nav id = "Redes_sociales">
-                    <a id = "instagram" href = "https://www.instagram.com/vickycalvino/"><i class="fab fa-instagram"></i></a>
-                    <a id = "whatsapp" href = "https://wa.link/j0uf3y"><i class="fab fa-whatsapp"></i></a>
+                    <a id = "instagram" href = "https://www.instagram.com/vickycalvino/"><i class="fab fa-instagram"></i></a><!--
+                    --><a id = "whatsapp" href = "https://wa.link/j0uf3y"><i class="fab fa-whatsapp"></i></a>
                 </nav>
             </footer>
         </body>

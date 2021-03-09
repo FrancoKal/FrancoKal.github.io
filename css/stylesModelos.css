@@ -145,11 +145,6 @@
     padding: 10px;
 }
 
-.oculto
-{
-    display: none !important;
-}
-
 .contenedor:hover
 {
     padding: 0;
