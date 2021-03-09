@@ -30,6 +30,19 @@
 
 }
 
+@media screen and (max-width: 1200px)
+{
+    #half-circle
+    {
+        clip-path: circle(var(--circle-diameter) at top);
+    }
+
+    #big-img
+    {
+        top: 10vh;
+    }
+}
+
 *
 {
     /*  Variables   */
@@ -124,6 +137,7 @@ h1
 {
     z-index: 1;
     align-self: center;
+    width:auto;
     /*right: 10vh;*/
 }
 
