@@ -282,7 +282,7 @@ function isIncluded (arr1, arr2)
 
 async function SetItems (items)
 {
-    var imgIndex = 0, item, divs = [];
+    var imgIndex = 1, item, divs = [];
         
     for (item of items)
     {
@@ -290,7 +290,7 @@ async function SetItems (items)
         divs.push(document.createElement("div"));
         divs[imgIndex].setAttribute("class", "contenedor");
         divs[imgIndex].setAttribute("onclick", "QUICK_VIEW.open(this)");
-        divs[imgIndex].innerHTML = "<img src = '" + directory + toString(imgIndex + 1) + ".jpg' alt = 'No se pudo cargar la imagen'>";
+        divs[imgIndex].innerHTML = "<img src = '" + directory + imgIndex.toString() + ".jpg' alt = 'No se pudo cargar la imagen'>";
         document.getElementById("imagenes").appendChild(divs[imgIndex]);
         imgIndex++;
     }
