@@ -58,5 +58,53 @@
     {
         "nombre": "Calaveras blanco / negro",
         "descripcion": "dibujos estampado calavera"
+    },
+    {
+        "nombre": "Batista Gris Medio",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Jersey Estampado Negro / Salmon",
+        "descripcion": "estampado rosado"
+    },
+    {
+        "nombre": "Jersey Melange",
+        "descripcion": "liso gris"
+    },
+    {
+        "nombre": "Fibrana Floreado 1",
+        "descripcion": "dibujos estampado flores amarillo"
+    },
+    {
+        "nombre": "Fibrana Floreado 2",
+        "descripcion": "dibujos estampado flores rojo blanco"
+    },
+    {
+        "nombre": "Fibrana Floreado 3",
+        "descripcion": "dibujos estampado flores amarillo"
+    },
+    {
+        "nombre": "Poplin Batik Azul",
+        "descripcion": "textura blanco"
+    },
+    {
+        "nombre": "Denim Indigo",
+        "descripcion": "liso azul oscuro"
+    },
+    {
+        "nombre": "Brin Verde Botella Oscuro",
+        "descripcion": "liso gris"
+    },
+    {
+        "nombre": "Brin Aero",
+        "descripcion": "liso azul"
+    },
+    {
+        "nombre": "Batista Verde Ingles",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Batista Bordeaux",
+        "descripcion": "liso fucsia"
     }
 ]

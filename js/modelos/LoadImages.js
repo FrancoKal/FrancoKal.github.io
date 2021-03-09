@@ -288,10 +288,10 @@ async function SetItems (items)
     {
         //divs[imgIndex] = document.createElement("div");
         divs.push(document.createElement("div"));
-        divs[imgIndex].setAttribute("class", "contenedor");
-        divs[imgIndex].setAttribute("onclick", "QUICK_VIEW.open(this)");
-        divs[imgIndex].innerHTML = "<img src = '" + directory + imgIndex.toString() + ".jpg' alt = 'No se pudo cargar la imagen'>";
-        document.getElementById("imagenes").appendChild(divs[imgIndex]);
+        divs[imgIndex-1].setAttribute("class", "contenedor");
+        divs[imgIndex-1].setAttribute("onclick", "QUICK_VIEW.open(this)");
+        divs[imgIndex-1].innerHTML = "<img src = '" + directory + imgIndex + ".webp' alt = 'No se pudo cargar la imagen'>";
+        document.getElementById("imagenes").appendChild(divs[imgIndex-1]);
         imgIndex++;
     }
 
@@ -301,10 +301,11 @@ async function SetItems (items)
 async function GetListFrom (path)
 {
     var docData, headers = await getResponseHeadersFromDoc(path);
+    var d1 = new Date (lastTimeFromUpdate), d2 = new Date (headers.lastModified);
 
     try
     {
-        if (isNull(lastTimeFromUpdate) || headers.lastModified > lastTimeFromUpdate)
+        if (isNull(lastTimeFromUpdate) || d2 > d1) //Si la fecha de modificacion del JSON es posterior a la que esta en el localStorage, actualizo
         {
             localStorage.setItem("lastTimeFromUpdate-" + ListName, headers.lastModified); //Actualizo la fecha de la ultima actualizacion
             docData = await waitDoc(path).then((data) => { return data.responseText; }); //Abro el JSON y retorno los datos leidos
