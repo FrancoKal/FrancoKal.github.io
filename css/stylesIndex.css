@@ -79,8 +79,9 @@ section
 #wrapper-boton
 {
     width: max-content;
-    display: flex;
+    /*display: flex;
     justify-content: center;
+    flex-direction: column;*/
     /*top: 30%;
     left: 20%;*/
 }
@@ -90,6 +91,8 @@ h1
     color: #4f5355;
     font-family: "Bad Script", cursive/*'Playlist'*/;
     margin-bottom: 20px;
+    width: 100%;
+    text-align:center;
 }
 
 #boton
