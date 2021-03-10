@@ -141,6 +141,7 @@
 
 .contenedor
 {
+    background: transparent;
     display: inline-flex;
     box-sizing: border-box;
     padding: 10px;
