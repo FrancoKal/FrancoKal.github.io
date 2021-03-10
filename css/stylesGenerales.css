@@ -24,7 +24,6 @@
 *
 {
     font-family: 'Economica', sans-serif/*'League Spartan'*/;
-    /*font-size:x-large;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -115,6 +114,7 @@ header nav
 
 header a
 {
+    font-size: x-large;
     text-decoration: none;
     color:white;
     padding-inline: 30px;
