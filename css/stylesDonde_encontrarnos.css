@@ -32,7 +32,7 @@ main, #wrapper-content, #right-iframe-wrapper
 
 #left-text h1
 {
-    font-family: 'Playlist';
+    font-family: /*'Playlist'*/'Bad Script', cursive;
     margin-bottom:20px;
 }
 
@@ -103,4 +103,5 @@ main, #wrapper-content, #right-iframe-wrapper
 #direccion
 {
     margin-left: 10%;
+    font-size: x-large;
 }
