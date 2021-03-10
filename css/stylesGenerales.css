@@ -16,14 +16,14 @@
     src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff") format("woff"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.svg#League Spartan") format("svg");
 }*/
 
-/*@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bad+Script&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bad+Script&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Economica:ital,wght@1,700&display=swap');
 
 /*-----------------------------------------*/
 
 *
 {
-    font-family: 'Architects Daughter', cursive/*'League Spartan'*/;
+    font-family: 'Economica', sans-serif/*'League Spartan'*/;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
