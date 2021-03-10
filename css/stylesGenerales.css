@@ -1,6 +1,6 @@
 /*---------------Fonts---------------------*/
 
-@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
+/*@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
 @font-face
 {
     font-family: "Playlist";
@@ -14,7 +14,9 @@
     font-family: "League Spartan";
     src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot");
     src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff") format("woff"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.svg#League Spartan") format("svg");
-}
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 /*-----------------------------------------*/
 
