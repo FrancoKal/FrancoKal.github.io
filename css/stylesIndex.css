@@ -79,6 +79,8 @@ section
 #wrapper-boton
 {
     width: max-content;
+    display: flex;
+    justify-content: center;
     /*top: 30%;
     left: 20%;*/
 }
