@@ -164,6 +164,11 @@ function isIncluded (arr1, arr2)
     //return arr1.every((e) => { return (arr2.indexOf(e) > -1)? true : false; });
 }
 
+function addEvent(element, event, func)
+{
+    return isUndefined(element.addEventListener)? element.attachEvent("on" + event, func) : element.addEventListener(event, func);
+}
+
 async function SetItems (items)
 {
     var imgIndex = 1, item, divs = [];
@@ -173,7 +178,8 @@ async function SetItems (items)
         //divs[imgIndex] = document.createElement("div");
         divs.push(document.createElement("div"));
         divs[imgIndex-1].setAttribute("class", "contenedor");
-        divs[imgIndex-1].setAttribute("onclick", /*"QUICK_VIEW.open(this)"*/QUICK_VIEW.open);
+        //divs[imgIndex-1].setAttribute("onclick", /*"QUICK_VIEW.open(this)"*/QUICK_VIEW.open);
+        addEvent(divs[imgIndex-1], "click", QUICK_VIEW.open);
         divs[imgIndex-1].innerHTML = "<img src = '" + directory + imgIndex + ".webp' alt = 'No se pudo cargar la imagen'>";
         document.getElementById("imagenes").appendChild(divs[imgIndex-1]);
         imgIndex++;
