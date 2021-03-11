@@ -60,11 +60,8 @@ var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.
                                 NewSuggestion.setAttribute("class", "list-item");
                                 addEvent(NewSuggestion, "click", () => {
                                     inputBox.value = ModelName;
-                                    INPUT.search();                                });
-                                /*NewSuggestion.addEventListener("click", () => {
-                                    inputBox.value = ModelName;
-                                    INPUT.Search();
-                                });*/
+                                    INPUT.search();
+                                });
             
                                 NewSuggestion.innerHTML = ModelName;
                                 ul.appendChild(NewSuggestion);
