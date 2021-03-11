@@ -136,16 +136,6 @@ function AddAttributeValue(element, attribute, value)
     element.setAttribute(attribute, element.getAttribute(attribute) + " " + value);
 }*/
 
-function isNull(x)
-{
-    return x === null;
-}
-
-function isUndefined(x)
-{
-    return typeof x === undefined;
-}
-
 function isEmpty(str) //Elimina los espacios y tab de un string. Retorna true si queda vacio, o false si no
 {
     return (str.trim().length === 0)? true : false;
@@ -164,25 +154,20 @@ function isIncluded (arr1, arr2)
     //return arr1.every((e) => { return (arr2.indexOf(e) > -1)? true : false; });
 }
 
-function addEvent(element, event, func)
-{
-    return isUndefined(element.addEventListener)? element.attachEvent("on" + event, func) : element.addEventListener(event, func);
-}
-
 async function SetItems (items)
 {
-    var imgIndex = 1, item, divs = [];
+    var index = 1, item, divs = [];
         
     for (item of items)
     {
-        //divs[imgIndex] = document.createElement("div");
+        //divs[index] = document.createElement("div");
         divs.push(document.createElement("div"));
-        divs[imgIndex-1].setAttribute("class", "contenedor");
-        //divs[imgIndex-1].setAttribute("onclick", /*"QUICK_VIEW.open(this)"*/QUICK_VIEW.open);
-        addEvent(divs[imgIndex-1], "click", QUICK_VIEW.open);
-        divs[imgIndex-1].innerHTML = "<img src = '" + directory + imgIndex + ".webp' alt = 'No se pudo cargar la imagen'>";
-        document.getElementById("imagenes").appendChild(divs[imgIndex-1]);
-        imgIndex++;
+        divs[index-1].setAttribute("class", "contenedor");
+        //divs[index-1].setAttribute("onclick", /*"QUICK_VIEW.open(this)"*/QUICK_VIEW.open);
+        addEvent(divs[index-1], "click", QUICK_VIEW.open);
+        divs[index-1].innerHTML = "<img src = '" + directory + index + ".webp' alt = 'No se pudo cargar la imagen'>";
+        document.getElementById("imagenes").appendChild(divs[index-1]);
+        index++;
     }
 
     return divs;

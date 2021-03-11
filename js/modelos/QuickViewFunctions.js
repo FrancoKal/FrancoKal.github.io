@@ -10,12 +10,7 @@ window.onload =  () => {
         };
 
         return {
-
-            /*open: function (obj)
-            {
-                qv.img.src = obj.getElementsByTagName("img")[0].src;
-                qv.holder.style.display = "block";
-            },*/
+            
             open: function (event)
             {
                 qv.img.src = event.target.getElementsByTagName("img")[0].src;
