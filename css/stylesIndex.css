@@ -145,16 +145,10 @@ h1
     background-color: /*#83acbd*/ #9d7463;
 }
 
-#img-wrapper
-{
-    width: fit-content;
-}
-
 #big-img
 {
     z-index: 1;
     align-self: center;
-    width: 100%;
 }
 
 #product-bar
