@@ -5,6 +5,49 @@ var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.
 var list, ModelList;
 
 (async () => {
+
+    async function SetItems (items)
+    {
+        var index = 1, item, divs = [];
+            
+        for (item of items)
+        {
+            //divs[index] = document.createElement("div");
+            divs.push(document.createElement("div"));
+            divs[index-1].setAttribute("class", "contenedor");
+            //divs[index-1].setAttribute("onclick", "QUICK_VIEW.open(this)");
+            addEvent(divs[index-1], "click", QUICK_VIEW.open);
+            divs[index-1].innerHTML = "<img src = '" + directory + index + ".webp' alt = 'No se pudo cargar la imagen'>";
+            document.getElementById("imagenes").appendChild(divs[index-1]);
+            index++;
+        }
+
+        return divs;
+    }
+
+    async function GetListFrom (path)
+    {
+        var docData, headers = await getResponseHeadersFromDoc(path);
+        var d1 = new Date (lastTimeFromUpdate), d2 = new Date (headers.lastModified);
+
+        try
+        {
+            if (isNull(lastTimeFromUpdate) || d2 > d1) //Si la fecha de modificacion del JSON es posterior a la que esta en el localStorage, actualizo
+            {
+                localStorage.setItem("lastTimeFromUpdate-" + ListName, headers.lastModified); //Actualizo la fecha de la ultima actualizacion
+                docData = await waitDoc(path).then((data) => { return data.responseText; }); //Abro el JSON y retorno los datos leidos
+                localStorage.setItem(ListName + "JSON", docData); //Actualizo el local storage con el nuevo JSON
+            }
+            else docData = localStorage.getItem(ListName + "JSON"); //Si no es necesario actualizar el local storage, lo devuelvo asi nomas
+
+            return JSON.parse(docData);
+        }
+        catch (error)
+        {
+            console.log(error);
+        }
+    }
+    
     var ListName = sessionStorage.getItem("ImgList");
     var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.getItem("lastTimeFromUpdate-" + ListName);
 
@@ -157,48 +200,6 @@ function isIncluded (arr1, arr2)
     return arr1.every((e) => { return arr2.includes(e); });
     //return arr1.every((e) => { return (arr2.indexOf(e) > -1)? true : false; });
 }*/
-
-async function SetItems (items)
-{
-    var index = 1, item, divs = [];
-        
-    for (item of items)
-    {
-        //divs[index] = document.createElement("div");
-        divs.push(document.createElement("div"));
-        divs[index-1].setAttribute("class", "contenedor");
-        //divs[index-1].setAttribute("onclick", "QUICK_VIEW.open(this)");
-        addEvent(divs[index-1], "click", QUICK_VIEW.open);
-        divs[index-1].innerHTML = "<img src = '" + directory + index + ".webp' alt = 'No se pudo cargar la imagen'>";
-        document.getElementById("imagenes").appendChild(divs[index-1]);
-        index++;
-    }
-
-    return divs;
-}
-
-async function GetListFrom (path)
-{
-    var docData, headers = await getResponseHeadersFromDoc(path);
-    var d1 = new Date (lastTimeFromUpdate), d2 = new Date (headers.lastModified);
-
-    try
-    {
-        if (isNull(lastTimeFromUpdate) || d2 > d1) //Si la fecha de modificacion del JSON es posterior a la que esta en el localStorage, actualizo
-        {
-            localStorage.setItem("lastTimeFromUpdate-" + ListName, headers.lastModified); //Actualizo la fecha de la ultima actualizacion
-            docData = await waitDoc(path).then((data) => { return data.responseText; }); //Abro el JSON y retorno los datos leidos
-            localStorage.setItem(ListName + "JSON", docData); //Actualizo el local storage con el nuevo JSON
-        }
-        else docData = localStorage.getItem(ListName + "JSON"); //Si no es necesario actualizar el local storage, lo devuelvo asi nomas
-
-        return JSON.parse(docData);
-    }
-    catch (error)
-    {
-        console.log(error);
-    }
-}
 
 function waitDoc (path)
 {
