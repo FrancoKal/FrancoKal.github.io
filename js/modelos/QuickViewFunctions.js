@@ -13,6 +13,7 @@ window.onload =  () => {
             
             open: function (event)
             {
+                console.log(event.target);
                 qv.img.src = event.target.getElementsByTagName("img")[0].src;
                 qv.holder.style.display = "block";
             },
