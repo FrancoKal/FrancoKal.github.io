@@ -5,6 +5,9 @@ var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.
 var list, ModelList;
 
 (async () => {
+    
+    var ListName = sessionStorage.getItem("ImgList");
+    var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.getItem("lastTimeFromUpdate-" + ListName);
 
     async function SetItems (items)
     {
@@ -47,9 +50,6 @@ var list, ModelList;
             console.log(error);
         }
     }
-    
-    var ListName = sessionStorage.getItem("ImgList");
-    var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.getItem("lastTimeFromUpdate-" + ListName);
 
     /*var */list = await GetListFrom(directory + "list.json");
     /*var */ModelList = await SetItems(list);
