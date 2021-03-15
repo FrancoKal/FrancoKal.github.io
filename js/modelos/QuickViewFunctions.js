@@ -1,6 +1,6 @@
 var QUICK_VIEW;
 
-window.onload =  () => {
+addEvent("DOMContentLoaded", () => {
 
     QUICK_VIEW = (() => {
 
@@ -24,4 +24,4 @@ window.onload =  () => {
             }
         };
     }) ();
-};
+});

@@ -50,6 +50,8 @@ var list, ModelList;
 
     list = await GetListFrom(directory + "list.json");
     ModelList = await SetItems(list);
+    //Una vez que termino de parsear el JSON, llamo a la funcion INPUT. Caso contrario, las funciones del INPUT cargaran antes de que termine el parseo
+    INPUT(); 
 }) ();
 
 /*function RemoveAllElements (elements)
