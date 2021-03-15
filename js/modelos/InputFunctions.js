@@ -12,7 +12,7 @@ function isEmpty(str) //Elimina los espacios y tab de un string. Retorna true si
     return (str.trim().length === 0)? true : false;
 }
 
-INPUT = (() => {
+INPUT = () => {
 
     var l = list.length;
     var inputBox = document.getElementById("buscador").getElementsByTagName("input")[0];
@@ -108,4 +108,4 @@ INPUT = (() => {
             else ToggleBorderRadius(true);
         }
     };
-}) ();
+};
