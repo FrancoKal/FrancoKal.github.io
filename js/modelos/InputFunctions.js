@@ -79,8 +79,8 @@ function LoadINPUT ()
                 
                     display: function (status)
                     {
-                        //SearchListBox.style.display = (status === true)? "block" : "none";
-                        SearchListBox.classList.toggle("oculto", (status === true)? "block" : "none");
+                        SearchListBox.style.display = (status === true)? "block" : "none";
+                        //SearchListBox.classList.toggle("oculto", (status === true)? "block" : "none");
                     }
                 };
         
