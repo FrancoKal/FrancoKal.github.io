@@ -1,13 +1,24 @@
+*
+{
+    /*  Variables   */
+    --outer-input-box-color: rgba(62,27,255,1);
+    --my-box-shadow: 10px 10px 15px #2e2e2e;
+    --circle-diameter: /*100vh*/50vw;
+}
+
 @media screen and (min-width: 1200px)
 {
-    *
+    h1
     {
-        /*  Variables   */
-        --circle-diameter: 100vh;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
     }
 
-    #wrapper-boton
+    #outer-wrapper-boton
     {
+        flex-direction: column;
+        width: max-content;
         top: 30%;
         left: 20%;
     }
@@ -17,7 +28,7 @@
         clip-path: circle(var(--circle-diameter) at right);
     }
 
-    #big-img
+    #img-wrapper
     {
         right: 10vh;
     }
@@ -25,7 +36,6 @@
     #product-bar
     {
         flex-direction: row;
-        bottom: 0;
         width: 100%;
     }
 
@@ -38,66 +48,64 @@
 
 @media screen and (max-width: 1200px)
 {
-    *
+    #outer-wrapper-boton
     {
-        /*  Variables   */
-        --circle-diameter: 75vh;
+        bottom: 30vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    section
+    {
+        justify-content: center;
     }
 
     #half-circle
     {
-        clip-path: circle(var(--circle-diameter) at top);
+        clip-path: /*circle(var(--circle-diameter) at top)*/ellipse(80vh 50vh at top);
     }
 
-    #big-img
+    #img-wrapper
     {
         top: 10vh;
     }
 }
 
-*
-{
-    /*  Variables   */
-    --outer-input-box-color: rgba(62,27,255,1);
-    --my-box-shadow: 10px 10px 15px #2e2e2e;
-}
-
-section
+section, #outer-wrapper-boton, #boton, #img-wrapper, #product-bar, #product-bar ul
 {
     display: flex;
-    height: var(--circle-diameter);
-    width: 100%;
+}
+
+section, #boton
+{
     position: relative;
 }
 
-#wrapper-boton, #big-img, #boton span, #boton a, #product-bar
+#outer-wrapper-boton,/*#big-img, */#boton span, #boton a, #product-bar, #img-wrapper, #half-circle
 {
     position: absolute;
 }
 
-#wrapper-boton
+section
 {
-    width: max-content;
+    height: 100vh;
+    width: 100%;
 }
 
 h1
 {
     color: #4f5355;
     font-family: "Bad Script", cursive/*'Playlist'*/;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align:center;
 }
 
 #boton
 {
-    display: flex;
-    position: relative;
     align-items: center;
     color: #fff;
     background: linear-gradient(0deg, var(--outer-input-box-color) 0%, rgba(145,124,255,1) 100%);
     border-radius: 30px;
-    padding-block: 20px;
     height: 60px;
     width: 200px;
 }
@@ -116,7 +124,6 @@ h1
 {
     height: inherit;
     width: inherit;
-    /*right: 20px;*/
     padding: 0;
     border-radius: inherit;
     background:transparent;
@@ -139,29 +146,43 @@ h1
 
 #half-circle
 {
-    position: absolute;
     height: 100%;
     width: 100%;
     background-color: /*#83acbd*/ #9d7463;
 }
 
+#img-wrapper
+{
+    align-self: center;
+    /*width: fit-content;*/
+    /*background-image: url('../imagenes/barbijo_portada.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vh;
+    z-index: 1;*/
+}
+
 #big-img
 {
     z-index: 1;
-    align-self: center;
+    width: 37vw;
+    min-width: 400px;
+    /*width: 100%;
+    object-fit: cover;*/
 }
 
 #product-bar
 {
-    display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 0;
     z-index: 2;
 }
 
 #product-bar ul
 {
-    display: flex;
     list-style: none;
 }
 

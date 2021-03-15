@@ -29,13 +29,13 @@
     box-sizing: border-box;
 
     /*  Variables   */
-    --header-height: 15vh;
+    --header-height: 12vh;
     --my-box-shadow: 3px 3px 5px #807f7f;
 }
 
 /*Si toda la pagina es mas alta que 100vh, ajusto al footer para que este siempre abajo.
 Como su posicion sera absoluta (es posible que se superponga con algun otro elemento, por eso agrego el main::after del tamaño del footer para corregirlo*/
-@media (min-height: 100vh)
+/*@media (min-height: 100vh)
 {
     footer
     {
@@ -49,7 +49,7 @@ Como su posicion sera absoluta (es posible que se superponga con algun otro elem
         content: " ";
         height: var(--header-height);
     }
-}
+}*/
 
 /*Para que no aparezca un contorno punteado al hacer click en algun link o boton*/
 button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner
@@ -66,13 +66,14 @@ button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-mo
 body
 {
     min-height: 100vh;
-    position: relative;
+    /*position: relative;*/
 }
 
 main
 {
     min-height: inherit;
     background-color: #f4f9f9;
+    /*position: relative;*/
 }
 
 main::before
@@ -84,7 +85,7 @@ main::before
 
 /*--------------Header--------------*/
 
-header, footer
+header/*, footer*/
 {
     width: 100%;
     height: var(--header-height);
@@ -98,6 +99,8 @@ header
 {
     z-index: 2;
     position: fixed;
+    padding-block: 2vh;
+    padding-inline: 5vh;
     /*top: 0;*/
 }
 
@@ -130,32 +133,57 @@ header a:hover
     color: rgb(88, 88, 88);
 }
 
-header .fas.fa-home, #Redes_sociales a
+header .fas.fa-home, #redes-sociales
 {
     font-size: xx-large;
 }
 
 #Logo
 {
-    left: 50px;
-    height: 80px;
+    /*left: 50px;
+    height: 80px;*/
+    height:80%;
 }
 
-footer
+#redes-sociales
+{
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+    height: 100%;
+    position: fixed;
+}
+
+/*footer
 {
     justify-content: center;
+}*/
+
+#redes-sociales a span
+{
+    /*display: none;*/
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    padding: inherit;
+    background-color: inherit;
+    /*transition: visibility 0.2s linear;*/
 }
 
-#Redes_sociales a
+#redes-sociales a
 {
     text-decoration: none;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    position:relative;
 }
 
-#Redes_sociales a:hover
+#redes-sociales a:hover span
 {
-    padding: 30px;
+    visibility:visible;
+    display:inline-block;
 }
 
 #instagram

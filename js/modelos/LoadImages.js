@@ -1,11 +1,8 @@
-/*var INPUT;*/
-//Abro el list.json del directorio que leo en el sessionStorage con los datos de cada modelo
-/*var ListName = sessionStorage.getItem("ImgList");
-var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.getItem("lastTimeFromUpdate-" + ListName);*/
 var list, ModelList;
 
 (async () => {
-    
+
+    //Abro el list.json del directorio que leo en el sessionStorage con los datos de cada modelo
     var ListName = sessionStorage.getItem("ImgList");
     var directory = "imagenes/" + ListName + "/", lastTimeFromUpdate = localStorage.getItem("lastTimeFromUpdate-" + ListName);
 
@@ -51,111 +48,8 @@ var list, ModelList;
         }
     }
 
-    /*var */list = await GetListFrom(directory + "list.json");
-    /*var */ModelList = await SetItems(list);
-
-    /*INPUT = (function ()
-            {
-                var l = list.length;
-                var inputBox = document.getElementById("buscador").getElementsByTagName("input")[0];
-                var SearchListBox = document.getElementById("search-list");
-                var no_results = document.getElementById("sin-resultados");
-    
-                inputBox.value = ""; //Borro lo que sea que haya en el inputBox
-            
-                return {
-    
-                    Search: function ()
-                    {
-                        var i = 0, shown = l, input = inputBox.value.toUpperCase().split(" ");
-    
-                        no_results.classList.toggle("oculto", true);
-                        
-                        for (i of ModelList)
-                        {
-                            i.classList.toggle("oculto", false);
-                        }
-                        
-                        if (!isEmpty(inputBox.value)) //Si el inputBox no esta vacio, realizo la busqueda
-                        {
-                            for (i = 0; i < l; i++)
-                            {  
-                                //Paso las descripciones de cada contenedor a mayuscula, las separo por espacio, y las comparo con los filtros
-                                if (!isIncluded(input, list[i].nombre.toUpperCase()) && !isIncluded(input, list[i].descripcion.toUpperCase()))
-                                {
-                                    ModelList[i].classList.toggle("oculto", true);
-                                    shown--;
-                                }
-                            }
-    
-                            if (shown === 0) no_results.classList.toggle("oculto", false);
-                            inputBox.value = "";
-                        }
-    
-                        INPUT.ShowSuggestions(""); //Limpio las opciones de busqueda
-                    },
-                                    
-                    ShowSuggestions: function (search)
-                    {
-                        var i, UpperSearch = search.toUpperCase().split(" "), ul = SearchListBox.getElementsByTagName("ul")[0];
-                        var Suggestion = {
-    
-                            add: function (ModelName)
-                            {
-                                var NewSuggestion = document.createElement("li");
-        
-                                NewSuggestion.setAttribute("class", "list-item");
-                                addEvent(NewSuggestion, "click", () => {
-                                    inputBox.value = ModelName;
-                                    INPUT.Search();
-                                });
-            
-                                NewSuggestion.innerHTML = ModelName;
-                                ul.appendChild(NewSuggestion);
-                            },
-            
-                            clean: function () 
-                            {
-                                //Vacio el contenido del ul
-                                ul.innerHTML = "";
-                            },
-            
-                            display: function (status)
-                            {
-                                SearchListBox.style.display = (status === true)? "block" : "none";
-                            }
-                        };
-    
-                        function ToggleBorderRadius (status)
-                        {
-                            inputBox.style.borderRadius = (status === true)? "20px" : "20px 20px 0 0";
-                        }
-    
-                        Suggestion.clean();
-                        Suggestion.display(false);
-    
-                        if (!isEmpty(search)) //Si el input no esta vacio, realizo la busqueda
-                        {
-                            for (i = 0; i < l; i++)
-                            {
-                                //Paso las descripciones de cada contenedor a mayuscula, las separo por espacio, y las comparo con los filtros
-                                if (isIncluded(UpperSearch, list[i].nombre.toUpperCase()))
-                                {
-                                    Suggestion.add(list[i].nombre);
-                                }
-                            }
-    
-                            if (!isEmpty(ul.innerHTML))
-                            {
-                                Suggestion.display(true);
-                                ToggleBorderRadius(false);
-                            }
-                            else ToggleBorderRadius(true);
-                        }
-                        else ToggleBorderRadius(true);
-                    }
-                };
-            }) ();*/
+    list = await GetListFrom(directory + "list.json");
+    ModelList = await SetItems(list);
 }) ();
 
 /*function RemoveAllElements (elements)
@@ -181,24 +75,12 @@ function RemoveAttributeValue (element, attribute, value)
 function AddAttributeValue(element, attribute, value)
 {
     element.setAttribute(attribute, element.getAttribute(attribute) + " " + value);
-}*/
-
-/*function isEmpty(str) //Elimina los espacios y tab de un string. Retorna true si queda vacio, o false si no
-{
-    return (str.trim().length === 0)? true : false;
 }
 
 function ElementsInCommon(arr1, arr2)
 {
     //Si hay en el arr2 algun elemento del arr1 , retorna true, y sino false. La funcion retorna los elementos en comun entre ambos arrays
     return arr1.filter((e) => { return arr2.includes(e); });
-}
-
-function isIncluded (arr1, arr2)
-{
-    //Retorna true si todos los elementos del arr1 estan incluidos en el arr2, y false si alguno no coincide
-    return arr1.every((e) => { return arr2.includes(e); });
-    //return arr1.every((e) => { return (arr2.indexOf(e) > -1)? true : false; });
 }*/
 
 function waitDoc (path)
