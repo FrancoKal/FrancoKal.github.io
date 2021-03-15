@@ -1,4 +1,4 @@
-window.onload = () => {
+addEvent(document, "DOMContentLoaded", () => {
 
     var item, smallImgs = document.querySelectorAll("#product-bar img");
     var bigImg = document.getElementById("big-img"), circle = document.getElementById("half-circle");
@@ -33,14 +33,4 @@ window.onload = () => {
         //item.addEventListener("click", ChangeProduct);
     }
 
-}
-
-function addEvent(element, event, func)
-{
-    return isUndefined(element.addEventListener)? element.attachEvent("on" + event, func) : element.addEventListener(event, func);
-}
-
-function isUndefined (x)
-{
-    return x === undefined;
-}
+});

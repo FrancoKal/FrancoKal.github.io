@@ -1,6 +1,6 @@
 var CHANGE_LOCATION
 
-window.onload = () => {
+addEvent(document, "DOMContentLoaded", () => {
 
     CHANGE_LOCATION = (() => {
 
@@ -41,6 +41,7 @@ window.onload = () => {
                         iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.0721124927547!2d-58.39187127074681!3d-34.7986841975109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd33f774c10bd%3A0xe36d3d39bb19c983!2sSamuel%20Miguel%20Spiro%201098-1094%2C%20B1846DVD%20Adrogu%C3%A9%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1615117130227!5m2!1ses!2sar";
                         municipio.innerHTML = "Adrogue";
                         break;
+                        
                     case "Banfield":
                         ChangeLocationButtons[left].classList.toggle("oculto", true);
                         ChangeLocationButtons[right].classList.toggle("oculto", false);
@@ -54,7 +55,7 @@ window.onload = () => {
         };
 
     }) ();
-};
+});
 
 function hasClass (element, className)
 {
