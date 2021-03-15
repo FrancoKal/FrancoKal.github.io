@@ -14,7 +14,7 @@ function isEmpty(str) //Elimina los espacios y tab de un string. Retorna true si
 
 function LoadINPUT ()
 {
-    INPUT = () => {
+    INPUT = (() => {
 
         var l = list.length;
         var inputBox = document.getElementById("buscador").getElementsByTagName("input")[0];
@@ -110,5 +110,5 @@ function LoadINPUT ()
                 else ToggleBorderRadius(true);
             }
         };
-    };
+    }) ();
 }
