@@ -1,6 +1,6 @@
 var QUICK_VIEW;
 
-addEvent("DOMContentLoaded", () => {
+addEvent(document, "DOMContentLoaded", () => {
 
     QUICK_VIEW = (() => {
 
