@@ -15,7 +15,6 @@ var list, ModelList;
             //divs[index] = document.createElement("div");
             divs.push(document.createElement("div"));
             divs[index-1].setAttribute("class", "contenedor");
-            //divs[index-1].setAttribute("onclick", "QUICK_VIEW.open(this)");
             addEvent(divs[index-1], "click", QUICK_VIEW.open);
             divs[index-1].innerHTML = "<img src = '" + directory + index + ".webp' alt = 'No se pudo cargar la imagen'>";
             document.getElementById("imagenes").appendChild(divs[index-1]);

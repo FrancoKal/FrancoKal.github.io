@@ -9,14 +9,14 @@
             <title>Cubrebocas &#128205 Banfield - Vicky Calvino</title>
             <base href = "http://0.0.0.0:8000/">
             <link rel = "stylesheet" href = "css/normalize.css">
-            <link rel = "stylesheet" href = "css/stylesIndex.css">
             <link rel = "stylesheet" href = "css/stylesGenerales.css">
+            <link rel = "stylesheet" href = "css/stylesBuscanos.css">
             <!--<link href="//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist" rel="stylesheet" type="text/css"/> 
             <link href="//db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan" rel="stylesheet" type="text/css"/>-->
             <script src="https://kit.fontawesome.com/a61747b6f1.js" crossorigin="anonymous"></script>
             <script src = "js/CommonFunctions.js"></script>
             <script src = "js/ResponsiveHeader.js"></script>
-            <script src = "js/index/BarFunctions.js"></script>
+            <script src = "js/buscanos/IframeFunctions.js"></script>
         </head>
 
         <body>
@@ -33,6 +33,7 @@
                     <button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>
                 </header>
             </div>
+            <button id = "toggle-header"><i class="fas fa-bars"></i></button>
             <aside id = "redes-sociales">
                 <a id = "instagram" href = "https://www.instagram.com/vickycalvino/">
                     <i class="fab fa-instagram"></i>
@@ -44,29 +45,34 @@
                 </a>
             </aside>
             <main>
-                <section>
-                    <figure id = "img-wrapper">
-                        <img src = "imagenes/barbijo_portada.webp" alt = "barbijos" id = "big-img">
-                    </figure>
-                        <div id = "outer-wrapper-boton">
-                            <h1>Barbijos / Cubrebocas</h1>
-                            <div id = "inner-wrapper-boton">
-                                <div id = "boton">
-                                    <span>VER</span>
-                                    <a href = "modelos.html">
-                                        <button><i class="fas fa-chevron-right"></i></button>
-                                    </a>
-                                </div>
-                            </div>
+                <div id = "wrapper-content">
+                    <div class = "content" id = "left-text">
+                        <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
+                        <div>
+                            <h1>Hace tu pedido</h1><br>
+                            <h2>Y cuando este listo, podes retirarlo en:</h2>
+                            <h3 id = "municipio">Banfield</h2>
                         </div>
-                        <div id = "product-bar">
-                            <ul>
-                                <li><img src = "imagenes/barbijo_portada.webp" class = "barbijos"></li>
-                                <li><img src = "imagenes/piluso_portada.webp" class = "pilusos"></li>
-                            </ul>
+                        <div id = "location">
+                            <span id = "round-pushpin-emoji">&#128205</span><span id = "direccion">A 2 cuadras de la estacion</span>
                         </div>
-                        <div id = "half-circle" class = "barbijos"></div>
-                </section>
+                    </div>
+                    <div class = "content" id = "right-iframe-wrapper">
+                        <div id = "iframe-container">
+                            <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <a id = "left" class = "change-location-wrapper" href = "buscanos.html#right">
+                                <button class = "change-location" onclick = "CHANGE_LOCATION.to('Banfield')">
+                                    <i class="fas fa-chevron-circle-left"></i>
+                                </button>
+                            </a>
+                            <a id = "right" class = "change-location-wrapper" href = "buscanos.html#left">
+                                <button class = "change-location" onclick = "CHANGE_LOCATION.to('Adrogue')">
+                                    <i class="fas fa-chevron-circle-right"></i>
+                                </button>
+                            </a>
+                        </div>          
+                    </div>
+                </div>
             </main>
         </body>
     </html>

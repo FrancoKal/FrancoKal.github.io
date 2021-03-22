@@ -29,30 +29,172 @@
     box-sizing: border-box;
 
     /*  Variables   */
-    --header-height: 12vh;
+    --header-background-color: linear-gradient(90deg, rgba(5,0,82,1) 0%, rgb(58, 58, 133) 22%, rgba(0,212,255,1) 86%);
     --my-box-shadow: 3px 3px 5px #807f7f;
+    --remaining-height: calc(100vh - var(--header-height));
+    --main-background-color: #f4f9f9;
 }
 
-/*Si toda la pagina es mas alta que 100vh, ajusto al footer para que este siempre abajo.
-Como su posicion sera absoluta (es posible que se superponga con algun otro elemento, por eso agrego el main::after del tamaño del footer para corregirlo*/
-/*@media (min-height: 100vh)
+@media screen and (max-width: 768px)
 {
-    footer
+    *
     {
-        position: absolute;
-        bottom: 0;
+        --header-height: 6vh;
+        --min-header-height: 40px;
     }
 
-    main::after
+    header nav, header nav a, #Logo
+    {
+        display: none;
+    }
+
+    header nav
+    {
+        min-width: max-content;
+        width: 30vw;
+        justify-content: space-between;
+    }
+
+    #toggle-header
+    {
+        background: transparent;
+        color: #fff;
+        position: absolute;
+        z-index: inherit;
+        width: 5vw;
+        height: 5vw;
+        right: 5vw;
+    }
+
+    #wrapper-header.expanded
+    {
+        height: 15vh;
+    }
+
+    #wrapper-header.expanded header
+    {
+        justify-content: center;
+    }
+
+    #wrapper-header.expanded #Logo
+    {
+        display: "";
+        height: 12vh;
+        left: 5vw;
+    }
+
+    #wrapper-header.expanded a,  #wrapper-header.expanded #Logo
     {
         display: block;
-        content: " ";
-        height: var(--header-height);
     }
-}*/
+
+    #wrapper-header.expanded nav
+    {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+
+    *
+    {
+        --header-height: 12vh;
+    }
+
+    #toggle-header
+    {
+        display: none;
+    }
+    
+    header nav
+    {
+        right: 5vw;
+        align-items: center;
+    }
+    
+    header a i
+    {
+        font-size: xx-large;
+    }
+
+    #Logo
+    {
+        left: 3vw;
+    }
+}
+
+main::before
+{
+    content: " ";
+    display: block;
+}
+
+main::before, #wrapper-header
+{
+    height: var(--header-height);
+    min-height: var(--min-header-height);
+}
+
+header, header nav, #redes-sociales
+{
+    display: flex;
+    align-items: center;
+}
+
+header a
+{
+    font-size: x-large;
+    padding-inline: 30px;
+    padding-block: 10px;
+}
+
+header a:hover, #toggle-header:hover
+{
+    background-color: #fff;
+    opacity: 0.4;
+    box-shadow: var(--my-box-shadow);
+    color: rgb(88, 88, 88);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#wrapper-header
+{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+}
+
+header
+{
+    width: inherit;
+    height: inherit;
+    background: var(--header-background-color);
+    position: relative;
+    /*background: linear-gradient(0deg, rgba(5,0,82,1) 0%, rgba(0,212,255,1) 100%);*/
+}
+
+header nav, header #Logo
+{
+    position: absolute;
+}
+
+header #Logo
+{
+    height: 10vh;
+}
+
+#redes-sociales a, header a
+{
+    color: #fff;
+}
 
 /*Para que no aparezca un contorno punteado al hacer click en algun link o boton*/
-button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner
+a, button, button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner, #toggle-header
 {
     border: none;
     outline: none;
@@ -66,124 +208,48 @@ button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-mo
 body
 {
     min-height: 100vh;
-    /*position: relative;*/
 }
 
 main
 {
     min-height: inherit;
-    background-color: #f4f9f9;
-    /*position: relative;*/
-}
-
-main::before
-{
-    display: block;
-    content: " ";
-    height: var(--header-height);
-}
-
-/*--------------Header--------------*/
-
-header/*, footer*/
-{
-    width: 100%;
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(5,0,82,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 86%);
-    /*background: linear-gradient(0deg, rgba(5,0,82,1) 0%, rgba(0,212,255,1) 100%);*/
-}
-
-header
-{
-    z-index: 2;
-    position: fixed;
-    padding-block: 2vh;
-    padding-inline: 5vh;
-    /*top: 0;*/
-}
-
-header nav, #Logo
-{
-    position: absolute;
-}
-
-header nav
-{
-    right: 30px;
-    display: flex;
-    align-items: center;
-}
-
-header a
-{
-    font-size: x-large;
-    text-decoration: none;
-    color:white;
-    padding-inline: 30px;
-    padding-block: 10px;
-}
-
-header a:hover
-{
-    background-color: #fff;
-    opacity: 0.4;
-    box-shadow: var(--my-box-shadow);
-    color: rgb(88, 88, 88);
-}
-
-header .fas.fa-home, #redes-sociales
-{
-    font-size: xx-large;
-}
-
-#Logo
-{
-    /*left: 50px;
-    height: 80px;*/
-    height:80%;
+    background-color: var(--main-background-color);
 }
 
 #redes-sociales
 {
     z-index:2;
-    display: flex;
     flex-direction: column;
-    /*align-items: center;*/
     justify-content: center;
     height: 100%;
     position: fixed;
 }
 
-/*footer
-{
-    justify-content: center;
-}*/
-
 #redes-sociales a span
 {
-    /*display: none;*/
-    visibility: hidden;
+    display: none;
+    width: 0;
     position: absolute;
     top: 0;
     padding: inherit;
     background-color: inherit;
-    /*transition: visibility 0.2s linear;*/
+    transition: width 0.5s;
+    -o-transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
 }
 
 #redes-sociales a
 {
-    text-decoration: none;
-    color: white;
     padding: 10px;
     position:relative;
+    font-size: xx-large;
 }
 
 #redes-sociales a:hover span
 {
-    visibility:visible;
-    display:inline-block;
+    width: max-content;
+    display:/*inline-block*/flex;
 }
 
 #instagram
@@ -199,6 +265,16 @@ header .fas.fa-home, #redes-sociales
 .oculto
 {
     display: none !important;
+}
+
+.dark-background
+{
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 

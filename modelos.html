@@ -7,24 +7,33 @@
             <meta name = "keywords"     content = "barbijos cubrebocas pilusos banfield zona sur">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Cubrebocas &#128205 Banfield - Vicky Calvino</title>
-            <base href = "https://francokal.github.io/">
+            <base href = "http://0.0.0.0:8000/">
+            <link rel = "stylesheet" href = "css/normalize.css">
             <link rel = "stylesheet" href = "css/stylesGenerales.css">
             <link rel = "stylesheet" href = "css/stylesModelos.css">
             <script src="https://kit.fontawesome.com/a61747b6f1.js" crossorigin="anonymous"></script>
             <script src = "js/CommonFunctions.js"></script>
             <script src = "js/modelos/QuickViewFunctions.js"></script>
+            <script src = "js/ResponsiveHeader.js"></script>
             <script src = "js/modelos/LoadImages.js"></script>
             <script src = "js/modelos/InputFunctions.js"></script>
         </head>
 
         <body>
-            <header>
-                <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
-                <nav>
-                    <a href = "donde_encontrarnos.html">Donde encontrarnos</a>
-                    <a href = "index.html"><i class = "fas fa-home"></i></a>
-                </nav>
-            </header>
+            <button id = "toggle-header"><i class="fas fa-bars"></i></button>
+            <div id = "wrapper-header">
+                <header>
+                    <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
+                    <nav>
+                        <a href = "buscanos.html">
+                            <i class="fas fa-map-pin"></i>
+                            Buscanos
+                        </a>
+                        <a href = "index.html"><i class = "fas fa-home"></i></a>
+                    </nav>
+                    <button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>
+                </header>
+            </div>
             <aside id = "redes-sociales">
                 <a id = "instagram" href = "https://www.instagram.com/vickycalvino/">
                     <i class="fab fa-instagram"></i>
@@ -47,7 +56,7 @@
                         <button type = "submit" onclick = "INPUT.Search()"><i class = "fas fa-search"></i></button>
                     </div>
                 </div>
-                <div id = "quickview-holder">
+                <div id = "quickview-holder" class = "dark-background oculto">
                     <i class="fas fa-times" id = "quickview-close" onclick = "QUICK_VIEW.close()"></i>
                     <img id = "quickview-img" src = "">
                 </div>
@@ -58,11 +67,5 @@
                     </div>
                 </div>
             </main>
-            <!--<footer>
-                <nav id = "Redes_sociales">
-                    <a id = "instagram" href = "https://www.instagram.com/vickycalvino/"><i class="fab fa-instagram"></i></a>
-                    <a id = "whatsapp" href = "https://wa.link/j0uf3y"><i class="fab fa-whatsapp"></i></a>
-                </nav>
-            </footer>-->
         </body>
     </html>

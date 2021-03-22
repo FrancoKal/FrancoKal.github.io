@@ -19,7 +19,6 @@
     {
         flex-direction: column;
         width: max-content;
-        top: 30%;
         left: 20%;
     }
 
@@ -52,9 +51,9 @@
     {
         bottom: 30vh;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
         width: 60%;
+        min-width: 335px;
     }
 
     section
@@ -73,6 +72,11 @@
     }
 }
 
+#outer-wrapper-boton
+{
+    align-items: center;
+}
+
 section, #outer-wrapper-boton, #boton, #img-wrapper, #product-bar, #product-bar ul
 {
     display: flex;
@@ -88,10 +92,16 @@ section, #boton
     position: absolute;
 }
 
+#boton, #boton a, #boton a button
+{
+    color: #fff;
+}
+
 section
 {
     height: 100vh;
     width: 100%;
+    align-items: center;
 }
 
 h1
@@ -103,7 +113,6 @@ h1
 #boton
 {
     align-items: center;
-    color: #fff;
     background: linear-gradient(0deg, var(--outer-input-box-color) 0%, rgba(145,124,255,1) 100%);
     border-radius: 30px;
     height: 60px;
@@ -117,7 +126,6 @@ h1
     width: 40px;
     border-radius: 50%;
     text-decoration: none;
-    color:#fff;
 }
 
 #boton a button
@@ -127,15 +135,13 @@ h1
     padding: 0;
     border-radius: inherit;
     background:transparent;
-    border: none;
-    color: #fff;
     font-size: xx-large;
 }
 
 #boton a:hover button
 {
-    background: #fff;
     color: var(--outer-input-box-color);
+    background-color: #fff;
 }
 
 #boton span
@@ -148,30 +154,36 @@ h1
 {
     height: 100%;
     width: 100%;
-    background-color: /*#83acbd*/ #9d7463;
+    /*background-color: #9d7463;*/
+    background: linear-gradient(90deg, rgba(181,40,60,1) 0%, rgba(147,21,44,1) 45%, rgba(79,36,44,1) 100%);
+}
+
+#half-circle.barbijos
+{
+    background: linear-gradient(90deg, rgba(181,40,60,1) 0%, rgba(147,21,44,1) 45%, rgba(79,36,44,1) 100%);
+}
+
+#half-circle.pilusos
+{
+   background: linear-gradient(90deg, rgba(92,237,218,1) 0%, rgba(34,170,152,1) 45%, rgba(10,128,112,1) 100%);
 }
 
 #img-wrapper
 {
-    align-self: center;
-    /*width: fit-content;*/
-    /*background-image: url('../imagenes/barbijo_portada.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100vh;
-    z-index: 1;*/
+    z-index: 1;
+    max-width: initial;
+    width: 37vw;
+    min-width: 400px;
 }
 
-#big-img
+/*#big-img
 {
     z-index: 1;
     width: 37vw;
     min-width: 400px;
-    /*width: 100%;
-    object-fit: cover;*/
-}
+    width: 100%;
+    object-fit: cover;
+}*/
 
 #product-bar
 {

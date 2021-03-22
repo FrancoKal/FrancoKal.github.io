@@ -10,27 +10,27 @@ addEvent(document, "DOMContentLoaded", () => {
     
     function ChangeProduct (event)
     {
+        var className = event.target.classList.toString();
+
         bigImg.src = this.src;//event.target.src;
         addEvent(a, "click", () => {
-            sessionStorage.setItem("ImgList", event.target.id);
+            sessionStorage.setItem("ImgList", className);
         });
 
-        if (this.id === "barbijos")
+        if (className === "barbijos")
         {
-            circle.style.backgroundColor = "#9d7463";
+            circle.classList.replace("pilusos", "barbijos");
             h1.innerHTML = "Barbijos / Cubrebocas";
         }
         else
         {
-            circle.style.backgroundColor = /*#83acbd"*/"#addcca";
+            circle.classList.replace("barbijos", "pilusos");
             h1.innerHTML = "Pilusos";
         }
     }
 
     for (item of smallImgs)
-    {
         addEvent(item, "click", ChangeProduct);
         //item.addEventListener("click", ChangeProduct);
-    }
 
 });

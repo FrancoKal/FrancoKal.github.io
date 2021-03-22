@@ -3,7 +3,7 @@
     --my-box-shadow: 3px 3px 5px #807f7f;
 }
 
-main, #wrapper-content, #right-iframe-wrapper
+#wrapper-content, #right-iframe-wrapper
 {
     display: flex;
     justify-content: center;
@@ -12,8 +12,8 @@ main, #wrapper-content, #right-iframe-wrapper
 
 #wrapper-content
 {
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height: var(--remaining-height);
 }
 
 #left-text, #right-iframe-wrapper
@@ -28,12 +28,19 @@ main, #wrapper-content, #right-iframe-wrapper
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: #0a2240;
+    color: var(--main-background-color);
 }
 
-#left-text h1
+#left-text #Logo
+{
+    width: 20%;
+    align-self:center;
+}
+
+#left-text h1, #left-text h2
 {
     font-family: /*'Playlist'*/'Bad Script', cursive;
-    margin-bottom:20px;
 }
 
 #right-iframe-wrapper
@@ -41,44 +48,54 @@ main, #wrapper-content, #right-iframe-wrapper
     width: 60%;
 }
 
-#iframe-container
+#iframe-container, #location
 {
     display: flex;
     align-items: center;
     position: relative;
-    width: 80%;
-    height: 100%;
 }
 
-#iframe-container iframe
+#iframe-container, #iframe-container iframe
 {
     width: 100%;
     height: 100%;
 }
 
-.change-location
+.change-location, #municipio
 {
     font-size: xx-large;
-    opacity: 0.5;
+}
+
+.change-location-wrapper
+{
     position: absolute;
     width: fit-content;
     height: fit-content;
     border-radius: 50%;
+}
+
+.change-location
+{
+    opacity: 0.5;
+    /*position: absolute;*/
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
     border: none;
     z-index: 1;
 }
 
-.change-location:hover
+.change-location-wrapper:hover .change-location
 {
     opacity: 1;
 }
 
-.change-location#left
+.change-location-wrapper#left
 {
     left: 2%;
 }
 
-.change-location#right
+.change-location-wrapper#right
 {
     right: 2%;
 }
@@ -90,18 +107,15 @@ main, #wrapper-content, #right-iframe-wrapper
 
 #location
 {
-    display: flex;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 #round-pushpin-emoji
 {
-    margin-left: 20%;
     font-size: 60px;
 }
 
 #direccion
 {
-    margin-left: 10%;
     font-size: x-large;
 }
