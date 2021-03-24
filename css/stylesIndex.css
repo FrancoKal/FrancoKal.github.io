@@ -2,8 +2,8 @@
 {
     /*  Variables   */
     --outer-input-box-color: rgba(62,27,255,1);
-    --my-box-shadow: 10px 10px 15px #2e2e2e;
-    --circle-diameter: /*100vh*/50vw;
+    --my-box-shadow2: 10px 10px 15px #2e2e2e;
+    --circle-diameter: 50vw;
 }
 
 @media screen and (min-width: 1200px)
@@ -49,7 +49,7 @@
 {
     #outer-wrapper-boton
     {
-        bottom: 30vh;
+        bottom: 20vh;
         flex-direction: row;
         justify-content: space-between;
         width: 60%;
@@ -63,7 +63,7 @@
 
     #half-circle
     {
-        clip-path: /*circle(var(--circle-diameter) at top)*/ellipse(80vh 50vh at top);
+        clip-path: /*circle(var(--circle-diameter) at top)*/ellipse(75vw 45vh at top);
     }
 
     #img-wrapper
@@ -99,7 +99,7 @@ section, #boton
 
 section
 {
-    height: 100vh;
+    height: var(--remaining-height);
     width: 100%;
     align-items: center;
 }
@@ -171,19 +171,18 @@ h1
 #img-wrapper
 {
     z-index: 1;
-    max-width: initial;
-    width: 37vw;
-    min-width: 400px;
+    max-width: 100%;
+    height: auto;
+    width: 707px;
+    /*min-width: 400px;*/
 }
 
-/*#big-img
+#big-img
 {
-    z-index: 1;
-    width: 37vw;
-    min-width: 400px;
-    width: 100%;
-    object-fit: cover;
-}*/
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
 
 #product-bar
 {
@@ -200,7 +199,7 @@ h1
 
 #product-bar ul li img:hover
 {
-    -webkit-filter: drop-shadow(var(--my-box-shadow));
+    -webkit-filter: drop-shadow(var(--my-box-shadow2));
 }
 
 #product-bar ul li img:active

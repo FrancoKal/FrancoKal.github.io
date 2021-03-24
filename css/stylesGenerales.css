@@ -40,7 +40,7 @@
     *
     {
         --header-height: 6vh;
-        --min-header-height: 40px;
+        --min-header-height: 42px;
     }
 
     header nav, header nav a, #Logo
@@ -100,6 +100,7 @@
     *
     {
         --header-height: 12vh;
+        --min-header-height: 63px;
     }
 
     #toggle-header
@@ -173,6 +174,7 @@ header
 {
     width: inherit;
     height: inherit;
+    min-height:inherit;
     background: var(--header-background-color);
     position: relative;
     /*background: linear-gradient(0deg, rgba(5,0,82,1) 0%, rgba(0,212,255,1) 100%);*/
@@ -185,7 +187,7 @@ header nav, header #Logo
 
 header #Logo
 {
-    height: 10vh;
+    height: 75%;
 }
 
 #redes-sociales a, header a
@@ -196,6 +198,9 @@ header #Logo
 /*Para que no aparezca un contorno punteado al hacer click en algun link o boton*/
 a, button, button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner, #toggle-header
 {
+    -webkit-border-image: none;
+    -o-border-image: none;
+    -moz-border-image: none;
     border: none;
     outline: none;
 }
