@@ -1,202 +1,35 @@
 /*---------------Fonts---------------------*/
 
-/*@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
-@font-face
-{
-    font-family: "Playlist";
-    src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot");
-    src: url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff") format("woff"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.svg#Playlist") format("svg");
-}
-
-@import url(//db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan);
-@font-face
-{
-    font-family: "League Spartan";
-    src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot");
-    src: url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff") format("woff"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.svg#League Spartan") format("svg");
-}*/
-
-/*@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bad+Script&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Economica:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /*-----------------------------------------*/
 
 *
 {
-    font-family: 'Economica', sans-serif/*'League Spartan'*/;
+    /*  Variables   */
+    --InnerBodyBackground: linear-gradient(90deg, rgba(24,68,122,1) 0%, rgba(32,91,164,1) 43%, rgba(0,212,255,1) 100%);
+    --FontColor:#1f1f1f;
+    --MainBackgroundColor: #f4f9f9;
+    --InnerBodyShadow: 0.5rem 0.5rem 1rem #525252;
+    --HeaderHeight: 20%;
+    --RemainingHeight: calc(100% - var(--HeaderHeight));
+    /*--------------*/
+
+    font-family: 'Roboto', sans-serif/*'League Spartan'*/;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
-    /*  Variables   */
-    --header-background-color: linear-gradient(90deg, rgba(5,0,82,1) 0%, rgb(58, 58, 133) 22%, rgba(0,212,255,1) 86%);
-    --my-box-shadow: 3px 3px 5px #807f7f;
-    --remaining-height: calc(100vh - var(--header-height));
-    --main-background-color: #f4f9f9;
+    color: var(--FontColor);
 }
 
-@media screen and (max-width: 768px)
+:hover
 {
-    *
-    {
-        --header-height: 6vh;
-        --min-header-height: 42px;
-    }
-
-    header nav, header nav a, #Logo
-    {
-        display: none;
-    }
-
-    header nav
-    {
-        min-width: max-content;
-        width: 30vw;
-        justify-content: space-between;
-    }
-
-    #toggle-header
-    {
-        background: transparent;
-        color: #fff;
-        position: absolute;
-        z-index: inherit;
-        width: 5vw;
-        height: 5vw;
-        right: 5vw;
-    }
-
-    #wrapper-header.expanded
-    {
-        height: 15vh;
-    }
-
-    #wrapper-header.expanded header
-    {
-        justify-content: center;
-    }
-
-    #wrapper-header.expanded #Logo
-    {
-        display: "";
-        height: 12vh;
-        left: 5vw;
-    }
-
-    #wrapper-header.expanded a,  #wrapper-header.expanded #Logo
-    {
-        display: block;
-    }
-
-    #wrapper-header.expanded nav
-    {
-        display: inherit;
-    }
-}
-
-@media screen and (min-width: 768px)
-{
-
-    *
-    {
-        --header-height: 12vh;
-        --min-header-height: 63px;
-    }
-
-    #toggle-header
-    {
-        display: none;
-    }
-    
-    header nav
-    {
-        right: 5vw;
-        align-items: center;
-    }
-    
-    header a i
-    {
-        font-size: xx-large;
-    }
-
-    #Logo
-    {
-        left: 3vw;
-    }
-}
-
-main::before
-{
-    content: " ";
-    display: block;
-}
-
-main::before, #wrapper-header
-{
-    height: var(--header-height);
-    min-height: var(--min-header-height);
-}
-
-header, header nav, #redes-sociales
-{
-    display: flex;
-    align-items: center;
-}
-
-header a
-{
-    font-size: x-large;
-    padding-inline: 30px;
-    padding-block: 10px;
-}
-
-header a:hover, #toggle-header:hover
-{
-    background-color: #fff;
-    opacity: 0.4;
-    box-shadow: var(--my-box-shadow);
-    color: rgb(88, 88, 88);
-}
-
-a
-{
-    text-decoration: none;
-}
-
-#wrapper-header
-{
-    position: fixed;
-    z-index: 2;
-    width: 100vw;
-}
-
-header
-{
-    width: inherit;
-    height: inherit;
-    min-height:inherit;
-    background: var(--header-background-color);
-    position: relative;
-    /*background: linear-gradient(0deg, rgba(5,0,82,1) 0%, rgba(0,212,255,1) 100%);*/
-}
-
-header nav, header #Logo
-{
-    position: absolute;
-}
-
-header #Logo
-{
-    height: 75%;
-}
-
-#redes-sociales a, header a
-{
-    color: #fff;
+    transition-duration: 0.1s;
 }
 
 /*Para que no aparezca un contorno punteado al hacer click en algun link o boton*/
-a, button, button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner, #toggle-header
+a, button, button:active, button:focus, button::-moz-focus-inner, a:active, a:focus, a::-moz-focus-inner
 {
     -webkit-border-image: none;
     -o-border-image: none;
@@ -205,82 +38,116 @@ a, button, button:active, button:focus, button::-moz-focus-inner, a:active, a:fo
     outline: none;
 }
 
-:hover
-{
-    transition-duration: 0.1s;
+a:link, a:visited
+{ 
+    color: none;
+    text-decoration: none;
+    cursor: auto;
+}
+  
+a:link:active, a:visited:active
+{ 
+    color: none;
 }
 
-body
+a
 {
-    min-height: 100vh;
+    text-decoration: none;
+
+}
+
+#main-wrapper, #header-wrapper
+{
+    width: 100%;
+}
+
+#header-wrapper
+{
+    height: var(--HeaderHeight);
+}
+
+#main-wrapper
+{
+    height: var(--RemainingHeight);
+}
+
+main, header
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+header, header nav, header a
+{
+    align-items: center;
+}
+
+header
+{
+    position: relative;
+    padding-inline: 8%;
+}
+
+header nav
+{
+    position: absolute;
+    left: 20%;
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header a
+{
+    display: flex;
+    color: var(--FontColor);
+    font-weight: bolder;
+    height: 100%;
+}
+
+header a:hover
+{
+    border-radius: 2rem;
+    background-color: var(--FontColor);
+}
+
+header a:hover i, header a:hover span
+{
+    color: var(--MainBackgroundColor);
+}
+
+header a[href = "index.html"]
+{
+    width: 25%;
+    justify-content: center;
+}
+
+header a[href = "buscanos.html"]
+{
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+header .fas
+{
+    font-size: 1.5rem;
 }
 
 main
 {
-    min-height: inherit;
-    background-color: var(--main-background-color);
+    background-color: var(--MainBackgroundColor);
 }
 
-#redes-sociales
+#Logo
 {
-    z-index:2;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    position: fixed;
+    height: 80%;
+    filter: brightness(0.9) drop-shadow(1px 1px 1px rgb(92, 92, 92));
+    -webkit-filter: brightness(0.9) drop-shadow(1px 1px 1px rgb(92, 92, 92));
 }
 
-#redes-sociales a span
-{
-    display: none;
-    width: 0;
-    position: absolute;
-    top: 0;
-    padding: inherit;
-    background-color: inherit;
-    transition: width 0.5s;
-    -o-transition: width 0.5s;
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
-}
 
-#redes-sociales a
-{
-    padding: 10px;
-    position:relative;
-    font-size: xx-large;
-}
-
-#redes-sociales a:hover span
-{
-    width: max-content;
-    display:/*inline-block*/flex;
-}
-
-#instagram
-{
-    background-color: rgb(221,42,123);
-}
-
-#whatsapp
-{
-    background-color: rgb(44,180,89);
-}
-
-.oculto
-{
-    display: none !important;
-}
-
-.dark-background
-{
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
 
 
 

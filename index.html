@@ -7,66 +7,51 @@
             <meta name = "keywords"     content = "barbijos cubrebocas pilusos banfield zona sur">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Cubrebocas &#128205 Banfield - Vicky Calvino</title>
-            <base href = "https://francokal.github.io/">
-            <!--<base href = "vickycalvino-cubrebocas.com/">-->
+            <base href = "http://0.0.0.0:8000/">
             <link rel = "stylesheet" href = "css/normalize.css">
             <link rel = "stylesheet" href = "css/stylesIndex.css">
             <link rel = "stylesheet" href = "css/stylesGenerales.css">
-            <!--<link href="//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist" rel="stylesheet" type="text/css"/> 
-            <link href="//db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan" rel="stylesheet" type="text/css"/>-->
             <script src="https://kit.fontawesome.com/a61747b6f1.js" crossorigin="anonymous"></script>
             <script src = "js/CommonFunctions.js"></script>
             <script src = "js/ResponsiveHeader.js"></script>
             <script src = "js/index/BarFunctions.js"></script>
         </head>
-        <body>
-            <div id = "wrapper-header">
-                <header>
-                    <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
-                    <nav>
-                        <a href = "buscanos.html">
-                            <i class="fas fa-map-pin"></i>
-                            Buscanos
-                        </a>
-                        <a href = "index.html"><i class = "fas fa-home"></i></a>
-                    </nav>
-                    <button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>
-                </header>
-            </div>
-            <aside id = "redes-sociales">
-                <a id = "instagram" href = "https://www.instagram.com/vickycalvino/">
-                    <i class="fab fa-instagram"></i>
-                    <span>INSTAGRAM</span>
-                </a>
-                <a id = "whatsapp" href = "https://wa.link/j0uf3y">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WHATSAPP</span>
-                </a>
-            </aside>
-            <main>
-                <section>
-                    <figure id = "img-wrapper">
-                        <img src = "imagenes/barbijo_portada.webp" alt = "barbijos" id = "big-img">
-                    </figure>
-                        <div id = "outer-wrapper-boton">
+        <body id = "inner-body-wrapper">
+            <div id = "inner-body-container">
+                <div id = "header-wrapper">
+                    <header>
+                        <img src = "imagenes/logo4.png" alt = "logo" id = "Logo">
+                        <nav>
+                            <a href = "index.html"><i class = "fas fa-home"></i></a>
+                            <a href = "buscanos.html">
+                                <i class="fas fa-map-pin"></i>
+                                <span>Buscanos</span>
+                            </a>
+                        </nav>
+                        <!--<button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>-->
+                   </header>
+                </div>
+               <div id = "main-wrapper">
+                    <main>
+                        <div id = "wrapper-boton">
                             <h1>Barbijos / Cubrebocas</h1>
-                            <div id = "inner-wrapper-boton">
-                                <div id = "boton">
-                                    <span>VER</span>
-                                    <a href = "modelos.html">
-                                        <button><i class="fas fa-chevron-right"></i></button>
-                                    </a>
-                                </div>
+                            <div id = "boton">
+                                <span>VER</span>
+                                <a href = "modelos.html">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                            <div id = "change-product">
+                                <button class = "barbijos"></button>
+                                <button class = "pilusos"></button>
                             </div>
                         </div>
-                        <div id = "product-bar">
-                            <ul>
-                                <li><img src = "imagenes/barbijo_portada.webp" class = "barbijos"></li>
-                                <li><img src = "imagenes/piluso_portada.webp" class = "pilusos"></li>
-                            </ul>
-                        </div>
-                        <div id = "half-circle" class = "barbijos"></div>
-                </section>
-            </main>
+                    </main>
+               </div>
+               <div id = "circle" class = "barbijos">
+                    <!--<img src = "imagenes/barbijo_portada.webp" alt = "barbijos" id = "big-img">-->
+                    <figure id = "big-img" class = "barbijos"></figure>
+               </div>
+            </div>
         </body>
     </html>
