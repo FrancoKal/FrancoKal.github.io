@@ -1,3 +1,9 @@
+*
+{
+    --HeaderHeight: 20%;
+    --RemainingHeight: calc(100% - var(--HeaderHeight));
+}
+
 @media screen and (min-width: 768px)
 {
     #circle
@@ -19,6 +25,11 @@
         width: 45%;
         height: 60%;
     }
+}
+
+main
+{
+    height: 100%;
 }
 
 main, #inner-body-container
@@ -101,16 +112,16 @@ main, #inner-body-container
     max-height: 60px;
     align-items: center;
     justify-content: space-evenly;
-    border: 3px solid var(--FontColor);
+    border: var(--Border);
     border-radius: 2rem;
 }
 
-#wrapper-boton h1, #boton span, #boton a i
+#wrapper-boton h1, #boton span, #boton i
 {
     color: var(--FontColor);
 }
 
-#boton span, #boton a i
+#boton span, #boton i
 {
     font-weight: bolder;
 }
@@ -120,7 +131,7 @@ main, #inner-body-container
     background-color: var(--FontColor);
 }
 
-#boton:hover span, #boton:hover a i
+#boton:hover span, #boton:hover i
 {
     color: var(--MainBackgroundColor);
 }

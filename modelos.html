@@ -19,21 +19,20 @@
             <script src = "js/modelos/InputFunctions.js"></script>
         </head>
         <body>
-            <button id = "toggle-header"><i class="fas fa-bars"></i></button>
-            <div id = "wrapper-header">
+            <div id = "header-wrapper">
                 <header>
-                    <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
+                    <img src = "imagenes/logo4.png" alt = "logo" id = "Logo">
                     <nav>
+                        <a href = "index.html"><i class = "fas fa-home"></i></a>
                         <a href = "buscanos.html">
                             <i class="fas fa-map-pin"></i>
-                            Buscanos
+                            <span>Buscanos</span>
                         </a>
-                        <a href = "index.html"><i class = "fas fa-home"></i></a>
                     </nav>
-                    <button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>
-                </header>
+                    <!--<button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>-->
+               </header>
             </div>
-            <aside id = "redes-sociales">
+            <!--<aside id = "redes-sociales">
                 <a id = "instagram" href = "https://www.instagram.com/vickycalvino/">
                     <i class="fab fa-instagram"></i>
                     <span>INSTAGRAM</span>
@@ -42,29 +41,31 @@
                     <i class="fab fa-whatsapp"></i>
                     <span>WHATSAPP</span>
                 </a>
-            </aside>
-            <main class = "clearfix">
-                <div id = "wrapper-buscador">
-                    <div id = "buscador">
-                        <input type = "search" placeholder = "Buscar..." onkeyup = "INPUT.ShowSuggestions(this.value)"><!--
-                    --><div id = "search-list">
-                            <ul>
-                            <!--    Aca van las sugerencias de busqueda -->
-                            </ul>
+            </aside>-->
+            <div id="main-wrapper">
+                <main>
+                    <div id = "wrapper-buscador">
+                        <div id = "buscador">
+                            <input type = "search" placeholder = "Buscar..." onkeyup = "INPUT.ShowSuggestions(this.value)"><!--
+                        --><div id = "search-list">
+                                <ul>
+                                <!--    Aca van las sugerencias de busqueda -->
+                                </ul>
+                            </div>
+                            <button type = "submit" onclick = "INPUT.Search()"><i class = "fas fa-search"></i></button>
                         </div>
-                        <button type = "submit" onclick = "INPUT.Search()"><i class = "fas fa-search"></i></button>
                     </div>
-                </div>
-                <div id = "quickview-holder" class = "dark-background oculto">
-                    <i class="fas fa-times" id = "quickview-close" onclick = "QUICK_VIEW.close()"></i>
-                    <img id = "quickview-img" src = "">
-                </div>
-                <div id = "wrapper-imagenes">
-                    <div id = "imagenes">
-                        <!-- Aca van las imagenes de los modelos -->
-                       <div id = "sin-resultados" class = "oculto"><b>¡Ups! No se han encontrado resultados</b></div>
+                    <div id = "quickview-holder" class = "dark-background oculto">
+                        <i class="fas fa-times" id = "quickview-close" onclick = "QUICK_VIEW.close()"></i>
+                        <img id = "quickview-img" src = "">
                     </div>
-                </div>
-            </main>
+                    <div id = "wrapper-imagenes">
+                        <div id = "imagenes">
+                            <!-- Aca van las imagenes de los modelos -->
+                           <div id = "sin-resultados" class = "oculto"><b>¡Ups! No se han encontrado resultados</b></div>
+                        </div>
+                    </div>
+                </main>
+            </div>
         </body>
     </html>

@@ -2,9 +2,9 @@ addEvent(document, "DOMContentLoaded", () => {
 
     var item, smallCircles = document.querySelectorAll("#change-product button");
     var bigImg = document.getElementById("big-img"), circle = document.getElementById("circle");
-    var h1 = document.querySelector("#wrapper-boton h1"), a = document.querySelector("#boton a");
+    var h1 = document.querySelector("#wrapper-boton h1"), boton = document.getElementById("boton");
 
-    addEvent(a, "click", () => {
+    addEvent(boton, "click", () => {
         sessionStorage.setItem("ImgList", "barbijos"); //Inicializo con el boton para barbijos
     });
     
@@ -12,7 +12,7 @@ addEvent(document, "DOMContentLoaded", () => {
     {
         var className = event.target.classList.value;
 
-        addEvent(a, "click", () => {
+        addEvent(boton, "click", () => {
             sessionStorage.setItem("ImgList", className);
         });
 
