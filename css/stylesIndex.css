@@ -1,14 +1,31 @@
 *
 {
-    --HeaderHeight: 20%;
     --RemainingHeight: calc(100% - var(--HeaderHeight));
 }
 
 @media screen and (min-width: 1150px)
 {
+    *
+    {
+        --HeaderHeight: 20%;
+    }
+
+
+    #inner-body-wrapper
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--InnerBodyBackground);
+    }
+
     #inner-body-container
     {
         height: 75%;
+        width: 75%;
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: var(--InnerBodyShadow);
     }
 
 
@@ -27,13 +44,26 @@
     {
         right: 2%;
     }
+
+    #redes-sociales
+    {
+        bottom: 8%;
+        left: 8%;
+        width: 5vw;
+    }
 }
 
 @media screen and (max-width: 1150px)
 {
+    *
+    {
+        --HeaderHeight: 12vh;
+    }
+
     #inner-body-container
     {
-        height: 85%;
+        height: inherit;
+        width: inherit;
     }
 
     main, #circle
@@ -43,7 +73,7 @@
 
     #circle
     {
-        clip-path: ellipse(60vw 30vh at center bottom);
+        clip-path: ellipse(80vw 40vh at center bottom);
     }
 
     #wrapper-boton
@@ -61,15 +91,18 @@
     {
         bottom: 5%;
     }
+
+    #redes-sociales
+    {
+        flex-direction: column;
+        height: 8vh;
+        right: 8%;
+    }
 }
 
 main
 {
     height: 100%;
-}
-
-main, #inner-body-container
-{
     position: relative;
 }
 
@@ -78,18 +111,18 @@ main, header, #main-wrapper, #header-wrapper, #circle
     border-radius: inherit;
 }
 
-#inner-body-wrapper, #wrapper-boton
+#wrapper-boton
 {
     justify-content: center;
 }
 
-main, header, #circle, #change-product, #boton, #inner-body-wrapper, #wrapper-boton
+main, header, #circle, #change-product, #boton, #wrapper-boton, #redes-sociales
 {
     display: flex;
     align-items: center;
 }
 
-#wrapper-boton, #circle, #big-img
+#wrapper-boton, #circle, #big-img, #redes-sociales
 {
     position: absolute;
 }
@@ -98,15 +131,11 @@ main, header, #circle, #change-product, #boton, #inner-body-wrapper, #wrapper-bo
 {
     width: 100w;
     height: 100vh;
-    background: var(--InnerBodyBackground);
 }
 
 #inner-body-container
 {
     background-color: var(--MainBackgroundColor);
-    width: 75%;
-    box-shadow: var(--InnerBodyShadow);
-    border-radius: 2rem;
 }
 
 #circle
@@ -207,4 +236,31 @@ main, header, #circle, #change-product, #boton, #inner-body-wrapper, #wrapper-bo
 {
     height: 25px;
     width: 25px;
+}
+
+#redes-sociales
+{
+    justify-content: space-between;
+}
+
+#redes-sociales i
+{
+    font-size: x-large;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+#redes-sociales i:hover
+{
+    opacity: 1;
+}
+
+#instagram i
+{
+    color: rgb(221,42,123);
+}
+
+#whatsapp i
+{
+    color: rgb(44,180,89);
 }
