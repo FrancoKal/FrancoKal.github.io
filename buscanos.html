@@ -18,23 +18,21 @@
             <script src = "js/ResponsiveHeader.js"></script>
             <script src = "js/buscanos/IframeFunctions.js"></script>
         </head>
-
         <body>
-            <div id = "wrapper-header">
+            <div id = "header-wrapper">
                 <header>
-                    <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
+                    <img src = "imagenes/logo4.png" alt = "logo" id = "Logo">
                     <nav>
-                        <a href = "buscanos.html">
+                        <a href = "index.html" class = "invert-color-onhover"><i class = "fas fa-home"></i></a>
+                        <a href = "buscanos.html" class = "invert-color-onhover">
                             <i class="fas fa-map-pin"></i>
-                            Buscanos
+                            <span>Buscanos</span>
                         </a>
-                        <a href = "index.html"><i class = "fas fa-home"></i></a>
                     </nav>
-                    <button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>
-                </header>
+                    <!--<button id = "toggle-header" onclick = "ExpandHeader()"><i class="fas fa-bars"></i></button>-->
+               </header>
             </div>
-            <button id = "toggle-header"><i class="fas fa-bars"></i></button>
-            <aside id = "redes-sociales">
+            <!--<aside id = "redes-sociales">
                 <a id = "instagram" href = "https://www.instagram.com/vickycalvino/">
                     <i class="fab fa-instagram"></i>
                     <span>INSTAGRAM</span>
@@ -43,36 +41,38 @@
                     <i class="fab fa-whatsapp"></i>
                     <span>WHATSAPP</span>
                 </a>
-            </aside>
-            <main>
-                <div id = "wrapper-content">
-                    <div class = "content" id = "left-text">
-                        <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
-                        <div>
-                            <h1>Hace tu pedido</h1><br>
-                            <h2>Y cuando este listo, podes retirarlo en:</h2>
-                            <h3 id = "municipio">Banfield</h2>
+            </aside>-->
+            <div id="main-wrapper">
+                <main>
+                    <div id = "wrapper-content">
+                        <div class = "content" id = "left-text">
+                            <img src = "imagenes/logo_transparente.webp" alt = "logo" id = "Logo">
+                            <div>
+                                <h1>Hace tu pedido</h1><br>
+                                <h2>Y cuando este listo, podes retirarlo en:</h2>
+                                <h3 id = "municipio">Banfield</h2>
+                            </div>
+                            <div id = "location">
+                                <span id = "round-pushpin-emoji">&#128205</span><span id = "direccion">A 2 cuadras de la estacion</span>
+                            </div>
                         </div>
-                        <div id = "location">
-                            <span id = "round-pushpin-emoji">&#128205</span><span id = "direccion">A 2 cuadras de la estacion</span>
+                        <div class = "content" id = "right-iframe-wrapper">
+                            <div id = "iframe-container">
+                                <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <a id = "left" class = "change-location-wrapper" href = "buscanos.html#right">
+                                    <button class = "change-location" onclick = "CHANGE_LOCATION.to('Banfield')">
+                                        <i class="fas fa-chevron-circle-left"></i>
+                                    </button>
+                                </a>
+                                <a id = "right" class = "change-location-wrapper" href = "buscanos.html#left">
+                                    <button class = "change-location" onclick = "CHANGE_LOCATION.to('Adrogue')">
+                                        <i class="fas fa-chevron-circle-right"></i>
+                                    </button>
+                                </a>
+                            </div>          
                         </div>
                     </div>
-                    <div class = "content" id = "right-iframe-wrapper">
-                        <div id = "iframe-container">
-                            <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            <a id = "left" class = "change-location-wrapper" href = "buscanos.html#right">
-                                <button class = "change-location" onclick = "CHANGE_LOCATION.to('Banfield')">
-                                    <i class="fas fa-chevron-circle-left"></i>
-                                </button>
-                            </a>
-                            <a id = "right" class = "change-location-wrapper" href = "buscanos.html#left">
-                                <button class = "change-location" onclick = "CHANGE_LOCATION.to('Adrogue')">
-                                    <i class="fas fa-chevron-circle-right"></i>
-                                </button>
-                            </a>
-                        </div>          
-                    </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </body>
     </html>

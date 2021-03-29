@@ -1,3 +1,10 @@
+*
+{
+    /*  Variables   */
+    --HeaderHeight: 12vh;
+    --RemainingHeight: calc(100% - var(--HeaderHeight));
+}
+
 @media screen and (min-width: 900px)
 {
     #wrapper-content
@@ -37,7 +44,17 @@
     }
 }
 
-#wrapper-content, #right-iframe-wrapper
+body
+{
+    height: 100vh;
+}
+
+main, #wrapper-content
+{
+    height: 100%;
+}
+
+#wrapper-content, #right-iframe-wrapper, #left-text
 {
     display: flex;
 }
@@ -50,22 +67,25 @@
 #left-text
 {
     text-align: center;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #0a2240;
-    color: var(--main-background-color);
 }
 
 #left-text #Logo
 {
-    width: 20%;
-    align-self:center;
+    width: 8vmax;
+    align-self: center;
 }
 
 #left-text h1, #left-text h2
 {
     font-family: /*'Playlist'*/'Bad Script', cursive;
+}
+
+#left-text h1, #left-text h2, #left-text h3, #left-text span
+{
+    color: var(--MainBackgroundColor);
 }
 
 #iframe-container, #location

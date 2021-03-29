@@ -22,6 +22,17 @@
     color: var(--FontColor);
 }
 
+html
+{
+    min-height: 100vh;
+}
+
+body
+{
+    height: 100%;
+    min-height: inherit;
+}
+
 :hover
 {
     transition-duration: 0.1s;
@@ -62,6 +73,7 @@ a
 #header-wrapper
 {
     height: var(--HeaderHeight);
+    min-height: 70px;
 }
 
 #main-wrapper
@@ -71,20 +83,18 @@ a
 
 header, header nav, header a
 {
+    display: flex;
     align-items: center;
 }
 
-/*main, header
+header, header a
 {
     height: 100%;
-}*/
+}
 
 header
 {
-    display: flex;
     width: 100%;
-    height: 100%;
-    height: 100%;
     position: relative;
     padding-inline: 8%;
 }
@@ -94,28 +104,16 @@ header nav
     position: absolute;
     left: 20%;
     width: 25%;
+    min-width: 300px;
     height: 50%;
-    display: flex;
     justify-content: space-around;
 }
 
 header a
 {
-    display: flex;
     color: var(--FontColor);
     font-weight: bolder;
-    height: 100%;
-    border-radius: 2rem;
-}
-
-header a:hover
-{
-    background-color: var(--FontColor);
-}
-
-header a:hover i, header a:hover span
-{
-    color: var(--MainBackgroundColor);
+    border-radius: 2rem; 
 }
 
 header a[href = "index.html"]
@@ -140,9 +138,10 @@ header .fas
     background-color: var(--MainBackgroundColor);
 }
 
-#Logo
+header #Logo
 {
-    height: 80%;
+    max-height: 80%;
+    height: calc(4vw + 4vh); /*Para que se ajuste tanto al largo como al alto de la pantalla*/
     filter: brightness(0.9) drop-shadow(1px 1px 1px rgb(92, 92, 92));
     -webkit-filter: brightness(0.9) drop-shadow(1px 1px 1px rgb(92, 92, 92));
 }
@@ -150,6 +149,17 @@ header .fas
 .oculto
 {
     display: none !important;
+}
+
+.invert-color-onhover:hover
+{
+    background-color: var(--FontColor);
+    color: var(--MainBackgroundColor);
+}
+
+.invert-color-onhover:hover > *
+{
+    color: var(--MainBackgroundColor);
 }
 
 

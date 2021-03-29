@@ -17,7 +17,8 @@ function LoadINPUT ()
     INPUT = (() => {
 
         var l = list.length;
-        var inputBox = document.getElementById("buscador").getElementsByTagName("input")[0];
+        var buscador = document.getElementById("buscador");
+        var inputBox = buscador.getElementsByTagName("input")[0];
         var SearchListBox = document.getElementById("search-list");
         var no_results = document.getElementById("sin-resultados");
         
@@ -61,7 +62,7 @@ function LoadINPUT ()
                     {
                         var NewSuggestion = document.createElement("li");
             
-                        NewSuggestion.setAttribute("class", "list-item");
+                        NewSuggestion.setAttribute("class", "list-item invert-color-onhover");
                         addEvent(NewSuggestion, "click", () => {
                             inputBox.value = ModelName;
                             INPUT.Search();
@@ -80,13 +81,13 @@ function LoadINPUT ()
                     display: function (status)
                     {
                         SearchListBox.style.display = (status === true)? "block" : "none";
-                        //SearchListBox.classList.toggle("oculto", (status === true)? "block" : "none");
+                        //SearchListBox.classList.toggle("oculto", !status);
                     }
                 };
         
-                function ToggleBorderRadius (status)
+                function ToggleBottomBorder (status)
                 {
-                    inputBox.style.borderRadius = (status === true)? "20px" : "20px 20px 0 0";
+                    buscador.classList.toggle("no-bottom-border", !status);
                 }
             
                 Suggestion.clean();
@@ -103,11 +104,11 @@ function LoadINPUT ()
                     if (!isEmpty(ul.innerHTML))
                     {
                         Suggestion.display(true);
-                        ToggleBorderRadius(false);
+                        ToggleBottomBorder(false);
                     }
-                    else ToggleBorderRadius(true);
+                    else ToggleBottomBorder(true);
                 }
-                else ToggleBorderRadius(true);
+                else ToggleBottomBorder(true);
             }
         };
     }) ();
