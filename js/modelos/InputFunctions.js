@@ -20,7 +20,8 @@ function LoadINPUT ()
         var buscador = document.getElementById("buscador");
         var inputBox = buscador.getElementsByTagName("input")[0];
         var SearchListBox = document.getElementById("search-list");
-        var no_results = document.getElementById("sin-resultados");
+        //var imagenes = document.getElementById("imagenes")
+        var NoResults = document.getElementById("sin-resultados");
         
         inputBox.value = ""; //Borro lo que sea que haya en el inputBox
                 
@@ -30,7 +31,7 @@ function LoadINPUT ()
             {
                 var i = 0, shown = l, input = inputBox.value.toUpperCase().split(" ");
         
-                no_results.classList.toggle("oculto", true);
+                NoResults.classList.toggle("oculto", true);
                             
                 for (i of ModelList) i.classList.toggle("oculto", false);
                             
@@ -46,7 +47,9 @@ function LoadINPUT ()
                         }
                     }
         
-                    if (shown === 0) no_results.classList.toggle("oculto", false);
+                    if (shown === 0) NoResults.classList.toggle("oculto", false);
+                    /*if (imagenes.lastElementChild.id === "sin-resultados")
+                        NoResults.classList.toggle("oculto", false);*/
                     inputBox.value = "";
                 }
         
@@ -80,35 +83,27 @@ function LoadINPUT ()
                 
                     display: function (status)
                     {
-                        SearchListBox.style.display = (status === true)? "block" : "none";
-                        //SearchListBox.classList.toggle("oculto", !status);
+                        buscador.classList.toggle("active-suggestions", !status);
                     }
                 };
-        
-                function ToggleBottomBorder (status)
-                {
-                    buscador.classList.toggle("no-bottom-border", !status);
-                }
             
                 Suggestion.clean();
-                Suggestion.display(false);
             
                 if (!isEmpty(search)) //Si el input no esta vacio, realizo la busqueda
                 {
                     for (i = 0; i < l; i++)
-                    {
                         //Paso las descripciones de cada contenedor a mayuscula, las separo por espacio, y las comparo con los filtros
-                        if (isIncluded(UpperSearch, list[i].nombre.toUpperCase())) Suggestion.add(list[i].nombre);
-                    }
+                        if (isIncluded(UpperSearch, list[i].nombre.toUpperCase()))
+                            Suggestion.add(list[i].nombre);
             
-                    if (!isEmpty(ul.innerHTML))
-                    {
-                        Suggestion.display(true);
-                        ToggleBottomBorder(false);
-                    }
-                    else ToggleBottomBorder(true);
+                    /*if (!isEmpty(ul.innerHTML))
+                        Suggestion.display(false);
+                    else
+                        Suggestion.display(true);*/
+
+                    Suggestion.display(isEmpty(ul.innerHTML));
                 }
-                else ToggleBottomBorder(true);
+                else Suggestion.display(true);
             }
         };
     }) ();

@@ -2,10 +2,9 @@
 {
     /*  Variables   */
     --BuscadorHeight: 6vh;
-    --BuscadorBorderRadius: 1rem;
-    --SearchListBorderRadius: 0 0 1rem 1rem;
+    --BuscadorBorderRadius: 2rem;
+    --SearchListBorderRadius: 0 0 2rem 2rem;
     --HeaderHeight: 12vh;
-    --RemainingHeight: calc(100% - var(--HeaderHeight));
 }
 
 
@@ -25,9 +24,20 @@
     }
 }
 
+#main-wrapper
+{
+    --RemainingHeight: calc(100vh - var(--HeaderHeight));
+    min-height: var(--RemainingHeight);
+    height: 100%;
+}
+
+main, #wrapper-imagenes, #imagenes
+{
+    min-height: inherit;
+}
+
 main
 {
-    height: 100%;
     width: 70%;
     flex-direction: column;
 }
@@ -60,10 +70,15 @@ main, #buscador
     background-color: var(--MainBackgroundColor);
 }
 
-#buscador.no-bottom-border
+#buscador.active-suggestions
 {
     border-bottom: none;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 2rem 2rem 0 0;
+}
+
+#buscador.active-suggestions button
+{
+    border-radius: 0 2rem 0 0;
 }
 
 #buscador input, #search-list
@@ -85,7 +100,7 @@ main, #buscador
 {
     width: 10%;
     height: 100%;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 2rem 2rem 0;
 }
 
 #search-list
@@ -98,6 +113,11 @@ main, #buscador
     border: var(--Border);
     border-top: none;
     z-index: 1;
+}
+
+#buscador.active-suggestions #search-list /*Cuando el buscador tiene las sugerencias activas, se muestra la search-list*/
+{
+    display: block;
 }
 
 .list-item
@@ -157,6 +177,7 @@ main, #buscador
 {
     width: 100%;
     font-size: xx-large;
+    height:inherit;
 }
 
 #quickview-holder
