@@ -106,5 +106,177 @@
     {
         "nombre": "Batista Bordeaux",
         "descripcion": "liso fucsia"
+    },
+    {
+        "nombre": "Poplin Rojo",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Escoces Turquesa",
+        "descripcion": "textura rayado celeste blanco"
+    },
+    {
+        "nombre": "Gross Rayado Celeste / Blanco",
+        "descripcion": "gris"
+    },
+    {
+        "nombre": "Sarga Verde Cemento",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Escoces Verde Ingles",
+        "descripcion": "estampado rayado"
+    },
+    {
+        "nombre": "Animal Print Blanco / Negro",
+        "descripcion": "estampado"
+    },
+    {
+        "nombre": "Gabardina Liviana Lunares Fucsia",
+        "descripcion": "puntos estampado blanco rosa"
+    },
+    {
+        "nombre": "Poplin Naranja",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Ripstop Camuflado Azul",
+        "descripcion": "textura estampado"
+    },
+    {
+        "nombre": "Corazones Rosas",
+        "descripcion": "estampado blanco"
+    },
+    {
+        "nombre": "Mapaches Blanco / Negro",
+        "descripcion": "estampado animales"
+    },
+    {
+        "nombre": "Estrellas gris",
+        "descripcion": "estampado"
+    },
+    {
+        "nombre": "Floreado Azul / Fucsia",
+        "descripcion": "estampado flores"
+    },
+    {
+        "nombre": "Estrellas Azul",
+        "descripcion": "estampado"
+    },
+    {
+        "nombre": "Lino Verde Musgo",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Denim Negro con tachas",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Animal Print Marron / Negro",
+        "descripcion": "estampado textura blanco naranja"
+    },
+    {
+        "nombre": "Ripstop Camuflado Beige",
+        "descripcion": "textura estampado verde"
+    },
+    {
+        "nombre": "Escoces Esfumado Rosado",
+        "descripcion": "textura esttampado rayado"
+    },
+    {
+        "nombre": "Crepe Lunares Celestino",
+        "descripcion": "estampado blanco azul celeste"
+    },
+    {
+        "nombre": "Dinosaurios Aguamarina",
+        "descripcion": "estampado blanco animales"
+    },
+    {
+        "nombre": "Arabesco Fucsia",
+        "descripcion": "textura estampado rosa"
+    },
+    {
+        "nombre": "Denim Negro",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Arabesco Lila",
+        "descripcion": "estampado blanco"
+    },
+    {
+        "nombre": "Ripstop Camuflado Gris",
+        "descripcion": "textura estampado negro"
+    },
+    {
+        "nombre": "Floreado Azul",
+        "descripcion": "estampado blanco flores"
+    },
+    {
+        "nombre": "Floreado Amarillo",
+        "descripcion": "estampado flores"
+    },
+    {
+        "nombre": "Verde Cemento con tachas",
+        "descripcion": "liso gris"
+    },
+    {
+        "nombre": "Escoces Gris / Naranja",
+        "descripcion": "textura rayado blanco"
+    },
+    {
+        "nombre": "Escoces Celeste / Amarillo",
+        "descripcion": "textura rayado azul"
+    },
+    {
+        "nombre": "Rayitas Verde Seco",
+        "descripcion": "rayado blanco"
+    },
+    {
+        "nombre": "Pique Cuadritos Multicolor",
+        "descripcion": "estampado blanco"
+    },
+    {
+        "nombre": "Floreado Verde Seco",
+        "descripcion": "estampado flores"
+    },
+    {
+        "nombre": "Vintage Pistacho",
+        "descripcion": "estampado blanco"
+    },
+    {
+        "nombre": "Camuflado Clasico Verde",
+        "descripcion": "textura estampado"
+    },
+    {
+        "nombre": "Floreado Primavera",
+        "descripcion": "estampado flores blanco"
+    },
+    {
+        "nombre": "Oxford Lila 902",
+        "descripcion": "liso blanco gris"
+    },
+    {
+        "nombre": "Lino Rosa Dior",
+        "descripcion": "liso"
+    },
+    {
+        "nombre": "Crepe Estampado Crudo / Negro",
+        "descripcion": "blanco crema"
+    },
+    {
+        "nombre": "Lino Champagne",
+        "descripcion": "liso rosa"
+    },
+    {
+        "nombre": "Lame Plata / Negro",
+        "descripcion": "textura"
+    },
+    {
+        "nombre": "Fibrana Man Ray",
+        "descripcion": "estampado blanco"
+    },
+    {
+        "nombre": "Brin Verde",
+        "descripcion": "liso"
     }
 ]
